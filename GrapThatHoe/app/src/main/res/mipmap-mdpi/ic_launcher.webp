@@ -1,0 +1,23 @@
+package kr.hs.dgsw.smartschool.glass_android;
+
+import android.util.SparseArray;
+import android.util.SparseIntArray;
+import android.view.View;
+import androidx.databinding.DataBinderMapper;
+import androidx.databinding.DataBindingComponent;
+import androidx.databinding.ViewDataBinding;
+import java.lang.IllegalArgumentException;
+import java.lang.Integer;
+import java.lang.Object;
+import java.lang.Override;
+import java.lang.RuntimeException;
+import java.lang.String;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import kr.hs.dgsw.smartschool.glass_android.databinding.ActivityCheckEmailBindingImpl;
+import kr.hs.dgsw.smartschool.glass_android.databinding.ActivityLoginBindingImpl;
+import kr.hs.dgsw.smartschool.glass_android.databinding.ActivityMainBindingImpl;
+import kr.hs.dgsw.smartschool.glass_android.databinding.ActivitySelectJobBindingImpl;
+import kr.hs.dgsw.smartschool.glass_android.databinding.ActivitySignUpStudentBindingImpl;
+import kr.hs.dg

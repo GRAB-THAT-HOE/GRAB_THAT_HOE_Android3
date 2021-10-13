@@ -1,0 +1,33 @@
+package kr.hs.dgsw.smartschool.glass_android.databinding;
+import kr.hs.dgsw.smartschool.glass_android.R;
+import kr.hs.dgsw.smartschool.glass_android.BR;
+import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
+import android.view.View;
+@SuppressWarnings("unchecked")
+public class ActivitySignUpStudentBindingImpl extends ActivitySignUpStudentBinding implements kr.hs.dgsw.smartschool.glass_android.generated.callback.OnClickListener.Listener {
+
+    @Nullable
+    private static final androidx.databinding.ViewDataBinding.IncludedLayouts sIncludes;
+    @Nullable
+    private static final android.util.SparseIntArray sViewsWithIds;
+    static {
+        sIncludes = null;
+        sViewsWithIds = new android.util.SparseIntArray();
+        sViewsWithIds.put(R.id.imageView, 11);
+    }
+    // views
+    @NonNull
+    private final androidx.constraintlayout.widget.ConstraintLayout mboundView0;
+    // variables
+    @Nullable
+    private final android.view.View.OnClickListener mCallback23;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback24;
+    @Nullable
+    private final android.view.View.OnClickListener mCallback22;
+    // values
+    // listeners
+    // Inverse Binding Event Handlers
+    private androidx.databinding.InverseBindingListener editClassandroidTextAttrChanged = new androidx.databinding.InverseBindingListener() {
+   
