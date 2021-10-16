@@ -6,14 +6,6 @@
     app:startDestination="@id/farmerHomeFragment">
 
     <fragment
-        android:id="@+id/farmerHomeFragment"
-        android:name="kr.co.moreversal.grapthathoe.view.fragment.FarmerHomeFragment"
-        android:label="FarmerHomeFragment" >
-        <action
-            android:id="@+id/action_farmerHomeFragment_to_farmerChatFragment"
-            app:destination="@id/farmerChatFragment" />
-    </fragment>
-    <fragment
         android:id="@+id/farmerChatFragment"
         android:name="kr.co.moreversal.grapthathoe.view.fragment.FarmerChatFragment"
         android:label="fragment_farmer_chat"
@@ -22,9 +14,19 @@
             android:id="@+id/action_farmerChatFragment_to_farmerProfileFragment"
             app:destination="@id/farmerProfileFragment" />
     </fragment>
+
     <fragment
         android:id="@+id/farmerProfileFragment"
         android:name="kr.co.moreversal.grapthathoe.view.fragment.FarmerProfileFragment"
         android:label="fragment_farmer_profile"
         tools:layout="@layout/fragment_farmer_profile" />
+    <fragment
+        android:id="@+id/farmerHomeFragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.FarmerHomeFragment"
+        android:label="FarmerHomeFragment" >
+        <action
+            android:id="@+id/action_farmerHomeFragment2_to_farmerChatFragment"
+            app:destination="@id/farmerChatFragment" />
+    </fragment>
+
 </navigation>

@@ -3,22 +3,19 @@
     xmlns:app="http://schemas.android.com/apk/res-auto">
 
     <item
-        android:id="@+id/main_home"
-        app:showAsAction="always"
+        android:id="@+id/farmerHomeFragment"
         android:enabled="true"
         android:icon="@drawable/ic_btn_home"
         android:title="광장" />
 
     <item
-        android:id="@+id/main_chat"
-        app:showAsAction="always"
+        android:id="@+id/farmerChatFragment"
         android:enabled="true"
         android:icon="@drawable/ic_btn_chat"
         android:title="이야기" />
 
     <item
-        android:id="@+id/main_profile"
-        app:showAsAction="always"
+        android:id="@+id/farmerProfileFragment"
         android:enabled="true"
         android:icon="@drawable/ic_btn_profile"
         android:title="나" />
