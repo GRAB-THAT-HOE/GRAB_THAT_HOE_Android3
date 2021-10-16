@@ -12,6 +12,9 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GrapThatHoe">
         <activity
+            android:name=".view.activity.SelectJobActivity"
+            android:exported="false" />
+        <activity
             android:name=".view.activity.CheckPhoneActivity"
             android:exported="false" />
         <activity
