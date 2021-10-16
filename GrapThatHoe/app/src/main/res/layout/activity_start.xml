@@ -6,13 +6,13 @@
     <data>
         <variable
             name="vm"
-            type="kr.co.moreversal.grapthathoe.viewmodel.activity.LoginViewModel" />
+            type="kr.co.moreversal.grapthathoe.viewmodel.activity.StartViewModel" />
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        tools:context=".view.activity.LoginActivity">
+        tools:context=".view.activity.StartActivity">
 
         <TextView
             android:id="@+id/textView"

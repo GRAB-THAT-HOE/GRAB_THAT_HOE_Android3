@@ -12,7 +12,10 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GrapThatHoe">
         <activity
-            android:name=".view.activity.LoginActivity"
+            android:name=".view.activity.CheckPhoneActivity"
+            android:exported="false" />
+        <activity
+            android:name=".view.activity.StartActivity"
             android:exported="false"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.GrapThatHoe.NoActionBar" />
