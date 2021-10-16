@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/farmerHomeFragment">
+
+    <fragment
+        android:id="@+id/farmerChatFragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.FarmerChatFragment"
+        android:label="fragment_farmer_chat"
+        tools:layout="@layout/fragment_farmer_chat" >
+        <action
+            android:id="@+id/action_farmerChatFragment_to_farmerProfileFragment"
+            app:destination="@id/farmerProfileFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/farmerProfileFragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.FarmerProfileFragment"
+        android:label="fragment_farmer_profile"
+        tools:layout="@layout/fragment_farmer_profile" />
+    <fragment
+        android:id="@+id/farmerHomeFragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.FarmerHomeFragment"
+        android:label="FarmerHomeFragment" >
+        <action
+            android:id="@+id/action_farmerHomeFragment2_to_farmerChatFragment"
+            app:destination="@id/farmerChatFragment" />
+    </fragment>
+
+</navigation>
