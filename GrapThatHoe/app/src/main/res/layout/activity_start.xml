@@ -20,9 +20,9 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/mainfont"
             android:text="@string/main_name"
-            android:textColor="@color/main"
+            android:textColor="@color/black"
             android:textSize="50sp"
-            app:layout_constraintBottom_toTopOf="@+id/appCompatButton"
+            app:layout_constraintBottom_toTopOf="@+id/btn_start"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -32,49 +32,27 @@
             android:layout_height="wrap_content"
             android:fontFamily="@font/mainfont"
             android:text="GrabThatHoe"
-            android:textColor="@color/main"
+            android:textColor="@color/black"
             android:textSize="20sp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView" />
 
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/appCompatButton"
+            android:id="@+id/btn_start"
             android:layout_width="170dp"
             android:layout_height="80dp"
             android:background="@drawable/btn_design"
             android:textColor="@color/white"
             android:textSize="25sp"
+            android:layout_marginTop="40dp"
+            android:onClick="@{() -> vm.onClickStart()}"
             android:fontFamily="@font/mainfont"
             android:text="시작하기"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
-
-
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="이미 계정이 있다면?"
-            android:textColor="#606060"
-            android:textSize="20sp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/appCompatButton" />
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:fontFamily="@font/mainfont"
-            android:text="로그인"
-            android:textColor="@color/main"
-            android:textSize="30sp"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/textView2" />
 
 
     </androidx.constraintlayout.widget.ConstraintLayout>
