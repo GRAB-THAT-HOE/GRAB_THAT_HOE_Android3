@@ -6,6 +6,15 @@
     android:layout_height="match_parent"
     tools:context=".view.activity.SelectJobActivity">
 
+    <ImageButton
+        android:id="@+id/btn_back_login2"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_margin="10dp"
+        android:background="@drawable/ic_btn_back"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -39,7 +48,7 @@
         android:background="@drawable/btn_select"
         android:fontFamily="@font/mainfont"
         android:layout_marginTop="30dp"
-        android:text="일꾼"
+        android:text="호미\n잡이"
         android:textSize="40sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
