@@ -105,9 +105,11 @@
             app:layout_constraintTop_toBottomOf="@+id/view" />
 
         <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/my_post_recycler"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="10dp"
+            tools:listitem="@layout/item_farmer_post"
             app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
             android:orientation="vertical"
             app:layout_constraintBottom_toBottomOf="parent"
