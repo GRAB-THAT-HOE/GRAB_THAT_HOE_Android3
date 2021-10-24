@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    compileSdk 31
+    compileSdk 27
 
     defaultConfig {
         applicationId "kr.co.moreversal.grapthathoe"
