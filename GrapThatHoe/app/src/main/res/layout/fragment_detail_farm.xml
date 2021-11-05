@@ -19,6 +19,7 @@
             android:id="@+id/btn_back_select"
             android:layout_width="35dp"
             android:layout_height="35dp"
+            android:onClick="@{() -> vm.onClickBack()}"
             android:background="@drawable/ic_btn_back"
             android:layout_margin="10dp"
             app:layout_constraintStart_toStartOf="parent"
@@ -53,31 +54,46 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
+            android:layout_marginTop="10dp"
             app:layout_constraintTop_toBottomOf="@+id/tv_money">
 
             <com.mikhaellopez.circularimageview.CircularImageView
                 android:id="@+id/iv_profile"
                 android:layout_width="70dp"
                 android:layout_height="60dp"
-                android:layout_margin="15dp"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
                 android:src="@drawable/ic_profile_w" />
 
-            <TextView
-                android:id="@+id/tv_name"
+            <LinearLayout
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_gravity="center_vertical"
-                android:layout_margin="15dp"
-                android:fontFamily="@font/mainfont"
-                android:text="농장주 이름"
-                android:textColor="@color/black"
-                android:textSize="30sp" />
+                android:orientation="vertical" >
 
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_margin="10dp"
+                    android:fontFamily="@font/mainfont"
+                    android:text="농장주 이름"
+                    android:textColor="@color/black"
+                    android:textSize="25sp" />
+
+                <TextView
+                    android:id="@+id/tv_locate"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="위치:대구소프트웨어마이스터고"
+                    android:textSize="20sp"
+                    android:layout_margin="10dp"
+                    android:textColor="@color/black" />
+            </LinearLayout>
         </LinearLayout>
 
-
         <androidx.viewpager2.widget.ViewPager2
-            android:id="@+id/viewPager2"
+            android:id="@+id/viewPager_farm"
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_margin="20dp"
@@ -91,17 +107,17 @@
 
 
         <com.tbuonomo.viewpagerdotsindicator.DotsIndicator
-            android:id="@+id/indicator_post"
+            android:id="@+id/indicator_farm"
             android:layout_width="wrap_content"
             android:layout_height="9dp"
             app:dotsColor="#5000771C"
             app:dotsCornerRadius="8dp"
             app:dotsSize="7dp"
             app:dotsSpacing="2dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="15dp"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/viewPager2"
+            app:layout_constraintTop_toBottomOf="@+id/viewPager_farm"
             app:progressMode="true"
             app:selectedDotColor="@color/main" />
 

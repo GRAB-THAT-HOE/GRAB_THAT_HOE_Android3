@@ -2,6 +2,7 @@ package kr.co.moreversal.grapthathoe.view.activity
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.View
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.NavHostFragment
@@ -35,5 +36,10 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
         binding.bnvFarmerMain
             .setupWithNavController(navController)
+    }
+
+    fun setNavVisible(isMainFragment: Boolean) {
+        binding.appbarMain.visibility = if(isMainFragment) View.VISIBLE else View.GONE
+        binding.bnvFarmerMain.visibility = if(isMainFragment) View.VISIBLE else View.GONE
     }
 }

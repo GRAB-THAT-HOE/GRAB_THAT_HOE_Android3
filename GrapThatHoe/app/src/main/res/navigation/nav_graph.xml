@@ -34,6 +34,12 @@
     <fragment
         android:id="@+id/detailFarmFragment"
         android:name="kr.co.moreversal.grapthathoe.view.fragment.DetailFarmFragment"
-        android:label="DetailFarmFragment" />
+        android:label="DetailFarmFragment" >
+        <action
+            android:id="@+id/action_detailFarmFragment_to_farmerHomeFragment"
+            app:destination="@id/farmerHomeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
 
 </navigation>
