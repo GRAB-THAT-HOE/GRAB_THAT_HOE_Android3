@@ -27,6 +27,19 @@
         <action
             android:id="@+id/action_farmerHomeFragment2_to_farmerChatFragment"
             app:destination="@id/farmerChatFragment" />
+        <action
+            android:id="@+id/action_farmerHomeFragment_to_detailFarmFragment"
+            app:destination="@id/detailFarmFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/detailFarmFragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.DetailFarmFragment"
+        android:label="DetailFarmFragment" >
+        <action
+            android:id="@+id/action_detailFarmFragment_to_farmerHomeFragment"
+            app:destination="@id/farmerHomeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>

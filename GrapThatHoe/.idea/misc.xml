@@ -33,7 +33,19 @@
         <entry key="..\:/Users/DGSW/Documents/GitHub/GRAB_THAT_HOE_Android3/GrapThatHoe/app/src/main/res/layout/fragment_farmer_profile.xml" value="0.3359375" />
         <entry key="..\:/Users/DGSW/Documents/GitHub/GRAB_THAT_HOE_Android3/GrapThatHoe/app/src/main/res/layout/fragment_first.xml" value="0.3359375" />
         <entry key="..\:/Users/DGSW/Documents/GitHub/GRAB_THAT_HOE_Android3/GrapThatHoe/app/src/main/res/layout/item_farmer_home.xml" value="0.25" />
+        <entry key="..\:/Users/DGSW/Documents/GitHub/GRAB_THAT_HOE_Android3/GrapThatHoe/app/src/main/res/layout/item_farmer_post.xml" value="0.3359375" />
         <entry key="..\:/Users/DGSW/Documents/GitHub/GRAB_THAT_HOE_Android3/GrapThatHoe/app/src/main/res/menu/bottom_navi_menu.xml" value="0.25" />
+        <entry key="app/src/main/res/layout/activity_create_profile.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/activity_in_app.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/activity_main.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/activity_select_job.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/activity_start.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_detail_farm.xml" value="0.20748181664304033" />
+        <entry key="app/src/main/res/layout/fragment_farmer_profile.xml" value="0.18292146514514127" />
+        <entry key="app/src/main/res/layout/item_detail_farm.xml" value="0.145303201622597" />
+        <entry key="app/src/main/res/layout/item_farmer_home.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/item_farmer_post.xml" value="0.28229166666666666" />
       </map>
     </option>
   </component>

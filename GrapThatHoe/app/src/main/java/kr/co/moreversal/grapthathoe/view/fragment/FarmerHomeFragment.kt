@@ -7,15 +7,22 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import kr.co.moreversal.grapthathoe.R
 import kr.co.moreversal.grapthathoe.databinding.FragmentFarmerHomeBinding
 import kr.co.moreversal.grapthathoe.network.model.FarmerPost
+import kr.co.moreversal.grapthathoe.view.activity.MainActivity
 import kr.co.moreversal.grapthathoe.view.adapter.FarmerHomeRecyclerAdapter
 import kr.co.moreversal.grapthathoe.viewmodel.fragment.FarmerHomeViewModel
 
 class FarmerHomeFragment : Fragment() {
     lateinit var binding : FragmentFarmerHomeBinding
     lateinit var farmerHomeViewModel: FarmerHomeViewModel
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        (activity as? MainActivity)?.setNavVisible(true)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -30,6 +37,12 @@ class FarmerHomeFragment : Fragment() {
         )
         performViewModel()
         initRecycler()
+
+        with(farmerHomeViewModel) {
+            FarmerHomeRecyclerAdapter.onClickDetail.observe(this@FarmerHomeFragment, {
+                findNavController().navigate(R.id.action_farmerHomeFragment_to_detailFarmFragment)
+            })
+        }
         return binding.root
     }
 
