@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import androidx.navigation.fragment.findNavController
 import kr.co.moreversal.grapthathoe.R
 import kr.co.moreversal.grapthathoe.databinding.FragmentFarmerHomeBinding
 import kr.co.moreversal.grapthathoe.databinding.FragmentFarmerProfileBinding
@@ -40,7 +41,9 @@ class FarmerProfileFragment : Fragment() {
         initRecycler()
 
         with(farmerProfileViewModel) {
-
+            onPostEvent.observe(this@FarmerProfileFragment, {
+                findNavController().navigate(R.id.action_farmerProfileFragment_to_postFragment)
+            })
         }
 
         return binding.root

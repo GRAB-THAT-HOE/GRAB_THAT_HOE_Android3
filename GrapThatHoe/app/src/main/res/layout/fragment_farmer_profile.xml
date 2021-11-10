@@ -122,11 +122,12 @@
             app:maxImageSize="35dp"
             app:fabCustomSize="70dp"
             app:tint="@color/white"
+            android:onClick="@{() -> vm.onClickPost()}"
             android:src="@drawable/ic_btn_add"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:backgroundTint="@color/main"
-            android:layout_margin="10dp"
+            android:layout_margin="20dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent" />
 

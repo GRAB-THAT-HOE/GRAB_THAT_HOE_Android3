@@ -16,8 +16,8 @@
 
         <ImageButton
             android:id="@+id/btn_back_select"
-            android:layout_width="35dp"
-            android:layout_height="35dp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
             android:onClick="@{() -> vm.onClickBack()}"
             android:background="@drawable/ic_btn_back"
             android:layout_margin="10dp"
