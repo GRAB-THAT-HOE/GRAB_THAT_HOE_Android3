@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="kr.co.moreversal.grapthathoe.viewmodel.fragment.PostViewModel" />
+            type="kr.co.moreversal.grapthathoe.viewmodel.fragment.Post2ViewModel" />
 
     </data>
 
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
-            android:text="일의 제목은\n무엇인가요?"
+            android:text="일을 설명해주세유"
             android:textColor="@color/black"
             android:textSize="40sp"
             app:layout_constraintStart_toStartOf="parent"
