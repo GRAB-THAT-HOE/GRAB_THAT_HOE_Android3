@@ -10,13 +10,15 @@ import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import kr.co.moreversal.grapthathoe.R
 import kr.co.moreversal.grapthathoe.databinding.FragmentPost2Binding
+import kr.co.moreversal.grapthathoe.databinding.FragmentPost3Binding
 import kr.co.moreversal.grapthathoe.view.activity.MainActivity
 import kr.co.moreversal.grapthathoe.viewmodel.fragment.PostViewModel
 import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post2ViewModel
+import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post3ViewModel
 
-class PostFragment2 : Fragment() {
-    lateinit var binding : FragmentPost2Binding
-    lateinit var post2ViewModel : Post2ViewModel
+class Post3Fragment : Fragment() {
+    lateinit var binding : FragmentPost3Binding
+    lateinit var post3ViewModel : Post3ViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -35,9 +37,9 @@ class PostFragment2 : Fragment() {
         )
         performViewModel()
 
-        with(post2ViewModel) {
-            onBackEvent.observe(this@PostFragment2, {
-                findNavController().navigate(R.id.action_postFragment_to_farmerProfileFragment)
+        with(post3ViewModel) {
+            onBackEvent.observe(this@Post3Fragment, {
+                findNavController().navigate(R.id.action_post3Fragment_to_post2Fragment)
             })
         }
 
@@ -45,8 +47,8 @@ class PostFragment2 : Fragment() {
     }
 
     private fun performViewModel() {
-        post2ViewModel = ViewModelProvider(this).get(Post2ViewModel::class.java)
-        binding.vm = post2ViewModel
+        post3ViewModel = ViewModelProvider(this).get(Post3ViewModel::class.java)
+        binding.vm = post3ViewModel
         binding.lifecycleOwner = this
         binding.executePendingBindings()
     }
