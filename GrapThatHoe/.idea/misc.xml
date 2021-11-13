@@ -37,6 +37,8 @@
         <entry key="..\:/Users/DGSW/Documents/GitHub/GRAB_THAT_HOE_Android3/GrapThatHoe/app/src/main/res/menu/bottom_navi_menu.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/btn_design.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/drawable/edittext_long_length.xml" value="0.27685185185185185" />
+        <entry key="app/src/main/res/drawable/ic_btn_file.xml" value="0.27685185185185185" />
+        <entry key="app/src/main/res/drawable/ic_btn_home.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/drawable/ic_no_image.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/layout/activity_check_phone.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_create_profile.xml" value="0.28229166666666666" />
@@ -55,6 +57,7 @@
         <entry key="app/src/main/res/layout/item_detail_farm.xml" value="0.145303201622597" />
         <entry key="app/src/main/res/layout/item_farmer_home.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/item_farmer_post.xml" value="0.34814783707634006" />
+        <entry key="app/src/main/res/menu/bottom_navi_menu.xml" value="0.28229166666666666" />
       </map>
     </option>
   </component>
