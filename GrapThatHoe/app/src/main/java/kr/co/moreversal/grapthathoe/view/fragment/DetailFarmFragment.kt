@@ -37,27 +37,13 @@ class DetailFarmFragment : Fragment() {
             false
         )
         performViewModel()
+        initViewPager()
 
         with(detailFarmViewModel) {
             onBackEvent.observe(this@DetailFarmFragment, {
                 findNavController().navigate(R.id.action_detailFarmFragment_to_farmerHomeFragment)
             })
         }
-
-        val detailFarmAdapter = DetailFarmAdapter(viewLifecycleOwner)
-        binding.viewPagerFarm.adapter = detailFarmAdapter
-
-        datas.apply {
-            add(FarmImg("https://nimage.g-enews.com/phpwas/restmb_allidxmake.php?idx=5&simg=2018073116220101420c77c10352218396190229.jpg"))
-            add(FarmImg("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img01.jpg"))
-            add(FarmImg("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img02.jpg"))
-            add(FarmImg("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img03.jpg"))
-            add(FarmImg("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img04.jpg"))
-        }
-        detailFarmAdapter.notifyDataSetChanged()
-
-        // viewPager에 인디케이터 연결하기
-        binding.indicatorFarm.setViewPager2(binding.viewPagerFarm)
 
         return binding.root
     }
@@ -67,5 +53,24 @@ class DetailFarmFragment : Fragment() {
         binding.vm = detailFarmViewModel
         binding.lifecycleOwner = this
         binding.executePendingBindings()
+    }
+
+    private fun initViewPager() {
+        var farmImgList = ArrayList<FarmImg>()
+        val detailFarmAdapter = DetailFarmAdapter(viewLifecycleOwner)
+        binding.viewPagerFarm.adapter = detailFarmAdapter
+
+        farmImgList.apply {
+            add(FarmImg("https://nimage.g-enews.com/phpwas/restmb_allidxmake.php?idx=5&simg=2018073116220101420c77c10352218396190229.jpg"))
+            add(FarmImg("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg"))
+            add(FarmImg("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg"))
+            add(FarmImg("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg"))
+            add(FarmImg("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg"))
+        }
+        detailFarmAdapter.farmImgList = farmImgList
+        detailFarmAdapter.notifyDataSetChanged()
+
+        // viewPager에 인디케이터 연결하기
+        binding.indicatorFarm.setViewPager2(binding.viewPagerFarm)
     }
 }

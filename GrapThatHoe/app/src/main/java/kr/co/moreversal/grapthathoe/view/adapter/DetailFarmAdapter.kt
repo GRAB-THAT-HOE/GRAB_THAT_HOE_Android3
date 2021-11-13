@@ -13,7 +13,7 @@ import kr.co.moreversal.grapthathoe.network.model.FarmImg
 class DetailFarmAdapter(lifecycleOwner: LifecycleOwner) :
 RecyclerView.Adapter<DetailFarmAdapter.PagerViewHolder>(){
 
-    private val farmImgList : List<FarmImg> = ArrayList<FarmImg>()
+    var farmImgList : List<FarmImg> = ArrayList<FarmImg>()
 
     class PagerViewHolder(private val binding: ItemDetailFarmBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(farmImg: FarmImg) {
