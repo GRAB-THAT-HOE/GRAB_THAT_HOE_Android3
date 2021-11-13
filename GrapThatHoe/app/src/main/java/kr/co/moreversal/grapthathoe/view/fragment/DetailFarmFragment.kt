@@ -1,5 +1,7 @@
 package kr.co.moreversal.grapthathoe.view.fragment
 
+import android.content.Intent
+import android.net.Uri
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -42,6 +44,11 @@ class DetailFarmFragment : Fragment() {
         with(detailFarmViewModel) {
             onBackEvent.observe(this@DetailFarmFragment, {
                 findNavController().navigate(R.id.action_detailFarmFragment_to_farmerHomeFragment)
+            })
+
+            onCallEvent.observe(this@DetailFarmFragment, {
+                val call = Intent(Intent.ACTION_CALL, Uri.parse("tel:01048552344"))
+                startActivity(call)
             })
         }
 

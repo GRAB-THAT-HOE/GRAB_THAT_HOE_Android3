@@ -126,6 +126,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="연락하기"
+            android:onClick="@{() -> vm.onClickCall()}"
             android:backgroundTint="@color/main"
             android:textSize="25sp"
             android:fontFamily="@font/mainfont"
