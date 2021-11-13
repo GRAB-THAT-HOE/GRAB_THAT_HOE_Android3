@@ -43,10 +43,10 @@
         <entry key="app/src/main/res/drawable/ic_no_image.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/layout/activity_check_phone.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_create_profile.xml" value="0.28229166666666666" />
-        <entry key="app/src/main/res/layout/activity_in_app.xml" value="0.5014281527956552" />
+        <entry key="app/src/main/res/layout/activity_in_app.xml" value="0.12912870566438145" />
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_select_job.xml" value="0.28229166666666666" />
-        <entry key="app/src/main/res/layout/activity_start.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/activity_start.xml" value="0.19238111507877506" />
         <entry key="app/src/main/res/layout/fragment_connect.xml" value="0.14895833333333333" />
         <entry key="app/src/main/res/layout/fragment_contect.xml" value="0.14895833333333333" />
         <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.28229166666666666" />
