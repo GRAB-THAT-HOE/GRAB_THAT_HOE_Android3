@@ -52,11 +52,13 @@
         <action
             android:id="@+id/action_postFragment_to_farmerProfileFragment"
             app:destination="@id/farmerProfileFragment"
+            app:exitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_postFragment_to_post2Fragment"
-            app:destination="@id/post2Fragment" />
+            app:destination="@id/post2Fragment"
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
     <fragment
         android:id="@+id/post2Fragment"
@@ -65,11 +67,13 @@
         <action
             android:id="@+id/action_post2Fragment_to_postFragment"
             app:destination="@id/postFragment"
+            app:exitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
         <action
             android:id="@+id/action_post2Fragment_to_post3Fragment"
-            app:destination="@id/post3Fragment" />
+            app:destination="@id/post3Fragment"
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
     <fragment
         android:id="@+id/post3Fragment"
@@ -78,6 +82,7 @@
         <action
             android:id="@+id/action_post3Fragment_to_post2Fragment"
             app:destination="@id/post2Fragment"
+            app:exitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
     </fragment>
