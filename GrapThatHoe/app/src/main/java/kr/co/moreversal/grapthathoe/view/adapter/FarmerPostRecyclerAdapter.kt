@@ -13,6 +13,7 @@ import kr.co.moreversal.grapthathoe.extension.SingleLiveEvent
 import kr.co.moreversal.grapthathoe.network.model.FarmerPost
 import kr.co.moreversal.grapthathoe.network.model.MyPost
 import kr.co.moreversal.grapthathoe.viewmodel.item.FarmerHomeItemViewModel
+import kr.co.moreversal.grapthathoe.viewmodel.item.FarmerPostItemViewModel
 
 class FarmerPostRecyclerAdapter(val lifecycleOwner: LifecycleOwner):
     RecyclerView.Adapter<FarmerPostRecyclerAdapter.FarmerPostViewHolder>() {
@@ -41,6 +42,9 @@ class FarmerPostRecyclerAdapter(val lifecycleOwner: LifecycleOwner):
 
     class FarmerPostViewHolder(private val binding: ItemFarmerPostBinding) : RecyclerView.ViewHolder(binding.root) {
         fun bind(myPost: MyPost, lifecycleOwner: LifecycleOwner) {
+            val viewModel = FarmerPostItemViewModel()
+            binding.vm = viewModel
+            binding.lifecycleOwner = lifecycleOwner
 
             with(myPost) {
                 binding.tvMyTitle.text = title
@@ -51,7 +55,15 @@ class FarmerPostRecyclerAdapter(val lifecycleOwner: LifecycleOwner):
                     .centerCrop()
                     .error(R.drawable.ic_no_image)
                     .into(binding.ivMyImg)
+
+                viewModel.onDetailEvent.observe(lifecycleOwner, {
+                    onClickDetail.call()
+                })
             }
         }
+    }
+
+    companion object {
+        val onClickDetail = SingleLiveEvent<Unit>()
     }
 }

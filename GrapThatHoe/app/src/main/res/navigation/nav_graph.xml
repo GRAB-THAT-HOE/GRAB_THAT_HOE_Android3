@@ -23,6 +23,10 @@
         <action
             android:id="@+id/action_farmerProfileFragment_to_postFragment"
             app:destination="@id/postFragment" />
+        <action
+            android:id="@+id/action_farmerProfileFragment_to_detailFarmFragment"
+            app:destination="@id/detailFarmFragment"
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
     <fragment
         android:id="@+id/farmerHomeFragment"
@@ -33,7 +37,8 @@
             app:destination="@id/farmerChatFragment" />
         <action
             android:id="@+id/action_farmerHomeFragment_to_detailFarmFragment"
-            app:destination="@id/detailFarmFragment" />
+            app:destination="@id/detailFarmFragment"
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
     <fragment
         android:id="@+id/detailFarmFragment"

@@ -44,6 +44,10 @@ class FarmerProfileFragment : Fragment() {
             onPostEvent.observe(this@FarmerProfileFragment, {
                 findNavController().navigate(R.id.action_farmerProfileFragment_to_postFragment)
             })
+
+            FarmerPostRecyclerAdapter.onClickDetail.observe(this@FarmerProfileFragment, {
+                findNavController().navigate(R.id.action_farmerProfileFragment_to_detailFarmFragment)
+            })
         }
 
         return binding.root
