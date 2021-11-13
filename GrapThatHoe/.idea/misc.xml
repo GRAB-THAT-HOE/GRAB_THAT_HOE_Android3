@@ -37,6 +37,7 @@
         <entry key="..\:/Users/DGSW/Documents/GitHub/GRAB_THAT_HOE_Android3/GrapThatHoe/app/src/main/res/menu/bottom_navi_menu.xml" value="0.25" />
         <entry key="app/src/main/res/drawable/btn_design.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/drawable/edittext_long_length.xml" value="0.27685185185185185" />
+        <entry key="app/src/main/res/drawable/ic_btn_connect.xml" value="0.16510416666666666" />
         <entry key="app/src/main/res/drawable/ic_btn_file.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/drawable/ic_btn_home.xml" value="0.27685185185185185" />
         <entry key="app/src/main/res/drawable/ic_no_image.xml" value="0.27685185185185185" />
@@ -46,11 +47,14 @@
         <entry key="app/src/main/res/layout/activity_main.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_select_job.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/activity_start.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_connect.xml" value="0.14895833333333333" />
+        <entry key="app/src/main/res/layout/fragment_contect.xml" value="0.14895833333333333" />
         <entry key="app/src/main/res/layout/fragment_detail.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_detail_farm.xml" value="0.16891879192475265" />
-        <entry key="app/src/main/res/layout/fragment_farmer_chat.xml" value="0.28229166666666666" />
+        <entry key="app/src/main/res/layout/fragment_farmer_chat.xml" value="0.2330891869969978" />
         <entry key="app/src/main/res/layout/fragment_farmer_home.xml" value="0.28229166666666666" />
         <entry key="app/src/main/res/layout/fragment_farmer_profile.xml" value="0.18292146514514127" />
+        <entry key="app/src/main/res/layout/fragment_pin.xml" value="0.14895833333333333" />
         <entry key="app/src/main/res/layout/fragment_post.xml" value="0.30117244212003924" />
         <entry key="app/src/main/res/layout/fragment_post2.xml" value="0.20659840135872717" />
         <entry key="app/src/main/res/layout/fragment_post3.xml" value="0.10012849758028697" />

@@ -7,6 +7,7 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
+import com.google.android.material.tabs.TabLayout
 import kr.co.moreversal.grapthathoe.R
 import kr.co.moreversal.grapthathoe.databinding.FragmentFarmerChatBinding
 import kr.co.moreversal.grapthathoe.view.activity.MainActivity
@@ -32,6 +33,7 @@ class FarmerChatFragment : Fragment() {
             false
         )
         performViewModel()
+        settingTab()
 
         return binding.root
     }
@@ -41,6 +43,31 @@ class FarmerChatFragment : Fragment() {
         binding.vm = farmerChatViewModel
         binding.lifecycleOwner = this
         binding.executePendingBindings()
+    }
+
+    private fun settingTab() {
+        // tabLayout operate
+        binding.tabRecord.addOnTabSelectedListener(object : TabLayout.OnTabSelectedListener {
+            override fun onTabSelected(tab: TabLayout.Tab?) {
+                val transaction = childFragmentManager.beginTransaction()
+                when (tab?.text) {
+                    "연결 기록" -> {
+                        transaction.replace(R.id.tap_content, ConnectFragment())
+                    }
+                    "말뚝 게시물" -> {
+                        transaction.replace(R.id.tap_content, PinFragment())
+                    }
+                }
+                transaction.commit()
+            }
+
+            override fun onTabUnselected(tab: TabLayout.Tab?) {
+            }
+
+            override fun onTabReselected(tab: TabLayout.Tab?) {
+            }
+
+        })
     }
 
 }
