@@ -50,6 +50,16 @@ class DetailFarmFragment : Fragment() {
                 val call = Intent(Intent.ACTION_CALL, Uri.parse("tel:01048552344"))
                 startActivity(call)
             })
+
+            onShowDetailEvent.observe(this@DetailFarmFragment, {
+                if (binding.tvDetailExplain.visibility == View.GONE) {
+                    binding.tvDetailExplain.visibility = View.VISIBLE
+                    binding.btnShowDetail.text = "자세한 정보 감추기"
+                } else if (binding.tvDetailExplain.visibility == View.VISIBLE) {
+                    binding.tvDetailExplain.visibility = View.GONE
+                    binding.btnShowDetail.text = "자세한 정보 보기"
+                }
+            })
         }
 
         return binding.root

@@ -6,6 +6,7 @@ import kr.co.moreversal.grapthathoe.extension.SingleLiveEvent
 class DetailFarmViewModel: ViewModel() {
     val onBackEvent = SingleLiveEvent<Unit>()
     val onCallEvent = SingleLiveEvent<Unit>()
+    val onShowDetailEvent = SingleLiveEvent<Unit>()
 
     fun onClickBack() {
         onBackEvent.call()
@@ -13,6 +14,10 @@ class DetailFarmViewModel: ViewModel() {
 
     fun onClickCall() {
         onCallEvent.call()
+    }
+
+    fun onClickShowDetail() {
+        onShowDetailEvent.call()
     }
 
 }
