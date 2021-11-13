@@ -7,6 +7,7 @@ class DetailFarmViewModel: ViewModel() {
     val onBackEvent = SingleLiveEvent<Unit>()
     val onCallEvent = SingleLiveEvent<Unit>()
     val onShowDetailEvent = SingleLiveEvent<Unit>()
+    val onPinEvent = SingleLiveEvent<Unit>()
 
     fun onClickBack() {
         onBackEvent.call()
@@ -18,6 +19,10 @@ class DetailFarmViewModel: ViewModel() {
 
     fun onClickShowDetail() {
         onShowDetailEvent.call()
+    }
+
+    fun onClickPin() {
+        onPinEvent.call()
     }
 
 }

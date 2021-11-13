@@ -7,6 +7,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -21,7 +22,7 @@ class DetailFarmFragment : Fragment() {
     lateinit var binding: FragmentDetailFarmBinding
     lateinit var detailFarmViewModel: DetailFarmViewModel
 
-    var datas = mutableListOf<FarmImg>()
+    var pinStatus: Int = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -58,6 +59,18 @@ class DetailFarmFragment : Fragment() {
                 } else if (binding.tvDetailExplain.visibility == View.VISIBLE) {
                     binding.tvDetailExplain.visibility = View.GONE
                     binding.btnShowDetail.text = "자세한 정보 보기"
+                }
+            })
+
+            onPinEvent.observe(this@DetailFarmFragment, {
+                if (pinStatus == 0) {
+                    binding.btnPin.setBackgroundResource(R.drawable.ic_btn_pin_b)
+                    Toast.makeText(context, "말뚝을 추가하였습니다.", Toast.LENGTH_SHORT).show()
+                    pinStatus = 1
+                } else if (pinStatus == 1) {
+                    binding.btnPin.setBackgroundResource(R.drawable.ic_btn_pin_w)
+                    Toast.makeText(context, "말뚝을 해제하였습니다.", Toast.LENGTH_SHORT).show()
+                    pinStatus = 0
                 }
             })
         }
