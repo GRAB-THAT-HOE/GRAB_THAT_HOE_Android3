@@ -49,6 +49,7 @@ class FarmerHomeRecyclerAdapter(val lifecycleOwner: LifecycleOwner):
 
                 Glide.with(binding.root)
                     .load(image)
+                    .centerCrop()
                     .error(R.drawable.ic_no_image)
                     .into(binding.ivPost)
 

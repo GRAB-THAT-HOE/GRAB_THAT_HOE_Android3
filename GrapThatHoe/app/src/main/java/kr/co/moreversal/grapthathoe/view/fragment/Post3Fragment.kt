@@ -31,7 +31,7 @@ class Post3Fragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_post,
+            R.layout.fragment_post3,
             container,
             false
         )

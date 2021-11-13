@@ -62,17 +62,18 @@ class FarmerProfileFragment : Fragment() {
         binding.myPostRecycler.adapter = farmerPostRecyclerAdapter
 
         farmerMyPostList.apply {
-            add(MyPost("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img01.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
-            add(MyPost("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img01.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
-            add(MyPost("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img01.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
-            add(MyPost("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img01.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
-            add(MyPost("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img01.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
-            add(MyPost("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img01.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
-            add(MyPost("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img01.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
-            add(MyPost("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img01.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
-            add(MyPost("http://www.joaradak.com/img_up/shop_pds/joaradak/design/images/page/sub1_1_img01.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
         }
 
+        farmerPostRecyclerAdapter.farmerMyPostList = farmerMyPostList
         farmerPostRecyclerAdapter.notifyDataSetChanged()
     }
 }

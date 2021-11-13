@@ -38,6 +38,10 @@ class PostFragment : Fragment() {
             onBackEvent.observe(this@PostFragment, {
                 findNavController().navigate(R.id.action_postFragment_to_farmerProfileFragment)
             })
+
+            onNextEvent.observe(this@PostFragment, {
+                findNavController().navigate(R.id.action_postFragment_to_post2Fragment)
+            })
         }
 
         return binding.root

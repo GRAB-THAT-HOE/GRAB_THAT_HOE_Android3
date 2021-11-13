@@ -54,6 +54,32 @@
             app:destination="@id/farmerProfileFragment"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_postFragment_to_post2Fragment"
+            app:destination="@id/post2Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/post2Fragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.Post2Fragment"
+        android:label="Post2Fragment" >
+        <action
+            android:id="@+id/action_post2Fragment_to_postFragment"
+            app:destination="@id/postFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_post2Fragment_to_post3Fragment"
+            app:destination="@id/post3Fragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/post3Fragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.Post3Fragment"
+        android:label="Post3Fragment" >
+        <action
+            android:id="@+id/action_post3Fragment_to_post2Fragment"
+            app:destination="@id/post2Fragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>

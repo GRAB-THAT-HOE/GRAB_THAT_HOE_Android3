@@ -60,6 +60,7 @@
             android:background="@drawable/btn_design"
             android:textColor="@color/white"
             android:textSize="30sp"
+            android:onClick="@{() -> vm.onClickNext()}"
             android:layout_marginTop="100dp"
             android:fontFamily="@font/mainfont"
             android:text="다음"
