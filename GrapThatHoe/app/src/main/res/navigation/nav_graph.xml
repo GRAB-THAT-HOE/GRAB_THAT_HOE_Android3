@@ -13,13 +13,29 @@
         <action
             android:id="@+id/action_farmerChatFragment_to_farmerProfileFragment"
             app:destination="@id/farmerProfileFragment" />
+        <action
+            android:id="@+id/action_farmerChatFragment_to_detailFarmFragment"
+            app:destination="@id/detailFarmFragment"
+            app:enterAnim="@android:anim/fade_in" />
+        <action
+            android:id="@+id/action_farmerChatFragment_to_detailProfileFragment"
+            app:destination="@id/detailProfileFragment"
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
 
     <fragment
         android:id="@+id/farmerProfileFragment"
         android:name="kr.co.moreversal.grapthathoe.view.fragment.FarmerProfileFragment"
         android:label="fragment_farmer_profile"
-        tools:layout="@layout/fragment_farmer_profile" />
+        tools:layout="@layout/fragment_farmer_profile" >
+        <action
+            android:id="@+id/action_farmerProfileFragment_to_postFragment"
+            app:destination="@id/postFragment" />
+        <action
+            android:id="@+id/action_farmerProfileFragment_to_detailFarmFragment"
+            app:destination="@id/detailFarmFragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
     <fragment
         android:id="@+id/farmerHomeFragment"
         android:name="kr.co.moreversal.grapthathoe.view.fragment.FarmerHomeFragment"
@@ -29,7 +45,8 @@
             app:destination="@id/farmerChatFragment" />
         <action
             android:id="@+id/action_farmerHomeFragment_to_detailFarmFragment"
-            app:destination="@id/detailFarmFragment" />
+            app:destination="@id/detailFarmFragment"
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
     <fragment
         android:id="@+id/detailFarmFragment"
@@ -38,8 +55,77 @@
         <action
             android:id="@+id/action_detailFarmFragment_to_farmerHomeFragment"
             app:destination="@id/farmerHomeFragment"
+            app:enterAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_detailFarmFragment_to_detailProfileFragment"
+            app:destination="@id/detailProfileFragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/postFragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.PostFragment"
+        android:label="PostFragment" >
+        <action
+            android:id="@+id/action_postFragment_to_farmerProfileFragment"
+            app:destination="@id/farmerProfileFragment"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_postFragment_to_post2Fragment"
+            app:destination="@id/post2Fragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/post2Fragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.Post2Fragment"
+        android:label="Post2Fragment" >
+        <action
+            android:id="@+id/action_post2Fragment_to_postFragment"
+            app:destination="@id/postFragment"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_post2Fragment_to_post3Fragment"
+            app:destination="@id/post3Fragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/post3Fragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.Post3Fragment"
+        android:label="Post3Fragment" >
+        <action
+            android:id="@+id/action_post3Fragment_to_post2Fragment"
+            app:destination="@id/post2Fragment"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/pinFragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.PinFragment"
+        android:label="PinFragment" />
+    <fragment
+        android:id="@+id/connectFragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.ConnectFragment"
+        android:label="ConnectFragment" />
+    <fragment
+        android:id="@+id/detailProfileFragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.DetailProfileFragment"
+        android:label="DetailProfileFragment" >
+        <action
+            android:id="@+id/action_detailProfileFragment_to_farmerHomeFragment"
+            app:destination="@id/farmerHomeFragment"
+            app:enterAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_detailProfileFragment_to_detailFarmFragment"
+            app:destination="@id/detailFarmFragment"
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
 
 </navigation>

@@ -3,10 +3,6 @@ package kr.co.moreversal.grapthathoe.viewmodel.fragment
 import androidx.lifecycle.ViewModel
 import kr.co.moreversal.grapthathoe.extension.SingleLiveEvent
 
-class FarmerProfileViewModel: ViewModel() {
-    val onPostEvent = SingleLiveEvent<Unit>()
+class ConnectViewModel: ViewModel() {
 
-    fun onClickPost() {
-        onPostEvent.call()
-    }
 }

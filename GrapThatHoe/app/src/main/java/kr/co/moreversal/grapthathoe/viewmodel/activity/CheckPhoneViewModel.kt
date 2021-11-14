@@ -8,6 +8,7 @@ import kr.co.moreversal.grapthathoe.extension.SingleLiveEvent
 class CheckPhoneViewModel: ViewModel() {
     val onResponseEvent = SingleLiveEvent<Unit>()
     val onCheckEvent = SingleLiveEvent<Unit>()
+    val onResendEvent = SingleLiveEvent<Unit>()
 
 
     val phoneNum = MutableLiveData<String>()
@@ -19,12 +20,11 @@ class CheckPhoneViewModel: ViewModel() {
     }
 
     fun onClickResend() {
+        onResendEvent.call()
         Log.d("TEST", "onClickResend: 재전송하기")
     }
 
     fun onClickCheck() {
         onCheckEvent.call()
     }
-
-
 }
