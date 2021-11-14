@@ -7,12 +7,9 @@ import androidx.lifecycle.LifecycleOwner
 import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kr.co.moreversal.grapthathoe.R
-import kr.co.moreversal.grapthathoe.databinding.ItemFarmerHomeBinding
 import kr.co.moreversal.grapthathoe.databinding.ItemFarmerPostBinding
 import kr.co.moreversal.grapthathoe.extension.SingleLiveEvent
-import kr.co.moreversal.grapthathoe.network.model.FarmerPost
 import kr.co.moreversal.grapthathoe.network.model.MyPost
-import kr.co.moreversal.grapthathoe.viewmodel.item.FarmerHomeItemViewModel
 import kr.co.moreversal.grapthathoe.viewmodel.item.FarmerPostItemViewModel
 
 class FarmerPostRecyclerAdapter(val lifecycleOwner: LifecycleOwner):
