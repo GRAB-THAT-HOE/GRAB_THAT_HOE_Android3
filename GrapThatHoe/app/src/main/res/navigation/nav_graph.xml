@@ -122,6 +122,10 @@
             app:enterAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_detailProfileFragment_to_detailFarmFragment"
+            app:destination="@id/detailFarmFragment"
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
 
 </navigation>

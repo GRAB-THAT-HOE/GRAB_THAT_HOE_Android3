@@ -13,7 +13,9 @@ import androidx.navigation.fragment.findNavController
 import kr.co.moreversal.grapthathoe.R
 import kr.co.moreversal.grapthathoe.databinding.FragmentDetailProfileBinding
 import kr.co.moreversal.grapthathoe.databinding.FragmentPostBinding
+import kr.co.moreversal.grapthathoe.network.model.MyPost
 import kr.co.moreversal.grapthathoe.view.activity.MainActivity
+import kr.co.moreversal.grapthathoe.view.adapter.FarmerPostRecyclerAdapter
 import kr.co.moreversal.grapthathoe.viewmodel.fragment.DetailProfileViewModel
 import kr.co.moreversal.grapthathoe.viewmodel.fragment.PostViewModel
 
@@ -37,6 +39,7 @@ class DetailProfileFragment : Fragment() {
             false
         )
         performViewModel()
+        initRecycler()
 
         with(detailProfileViewModel) {
             onBackEvent.observe(this@DetailProfileFragment, {
@@ -46,6 +49,10 @@ class DetailProfileFragment : Fragment() {
             onCallEvent.observe(this@DetailProfileFragment, {
                 val call = Intent(Intent.ACTION_CALL, Uri.parse("tel:01048552344"))
                 startActivity(call)
+            })
+
+            FarmerPostRecyclerAdapter.onClickDetail.observe(this@DetailProfileFragment, {
+                findNavController().navigate(R.id.action_detailProfileFragment_to_detailFarmFragment)
             })
         }
 
@@ -57,6 +64,27 @@ class DetailProfileFragment : Fragment() {
         binding.vm = detailProfileViewModel
         binding.lifecycleOwner = this
         binding.executePendingBindings()
+    }
+
+    private fun initRecycler() {
+        var detailProfileList = ArrayList<MyPost>()
+        val detailProfileRecyclerAdapter = FarmerPostRecyclerAdapter(viewLifecycleOwner)
+        binding.recyclerDetailProfile.adapter = detailProfileRecyclerAdapter
+
+        detailProfileList.apply {
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+            add(MyPost("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg", "딸기 농장 입니다.", "2021/11/10 ~ 2021/12/31"))
+        }
+
+        detailProfileRecyclerAdapter.farmerMyPostList = detailProfileList
+        detailProfileRecyclerAdapter.notifyDataSetChanged()
     }
 
 }
