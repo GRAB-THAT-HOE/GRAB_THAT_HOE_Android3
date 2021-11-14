@@ -6,12 +6,12 @@
         <variable
             name="vm"
             type="kr.co.moreversal.grapthathoe.viewmodel.item.ConnectItemViewModel" />
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
-        android:layout_height="120dp">
+        android:layout_height="120dp"
+        android:onClick="@{() -> vm.onClickDetailProfile()}" >
 
         <com.mikhaellopez.circularimageview.CircularImageView
             android:id="@+id/iv_profile_record"

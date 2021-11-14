@@ -35,7 +35,9 @@ class ConnectFragment : Fragment() {
         initRecycler()
 
         with(connectViewModel) {
-
+            ConnectRecyclerAdapter.onClickDetailProfile.observe(this@ConnectFragment, {
+                findNavController().navigate(R.id.action_farmerChatFragment_to_detailProfileFragment)
+            })
         }
 
         return binding.root
@@ -68,6 +70,5 @@ class ConnectFragment : Fragment() {
 
         connectRecyclerAdapter.connectList = connectList
         connectRecyclerAdapter.notifyDataSetChanged()
-
     }
 }
