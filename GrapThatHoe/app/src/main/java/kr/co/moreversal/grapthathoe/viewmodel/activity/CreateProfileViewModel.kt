@@ -6,6 +6,7 @@ import kr.co.moreversal.grapthathoe.extension.SingleLiveEvent
 class CreateProfileViewModel : ViewModel(){
     val onCheckEvent = SingleLiveEvent<Unit>()
     val onBackEvent = SingleLiveEvent<Unit>()
+    val onChangeImgEvent = SingleLiveEvent<Unit>()
 
     fun onClickCheck() {
         onCheckEvent.call()
@@ -13,5 +14,9 @@ class CreateProfileViewModel : ViewModel(){
 
     fun onClickBack() {
         onBackEvent.call()
+    }
+
+    fun onClickChangeImg() {
+        onChangeImgEvent.call()
     }
 }

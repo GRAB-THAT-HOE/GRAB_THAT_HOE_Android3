@@ -14,6 +14,18 @@
         android:layout_height="match_parent"
         tools:context=".view.activity.CheckPhoneActivity">
 
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/mainfont"
+            android:text="회원가입을 해주세유"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+            android:layout_marginLeft="20dp"
+            app:layout_constraintBottom_toTopOf="@+id/edit_phone_num"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
         <EditText
             android:id="@+id/edit_phone_num"
             android:layout_width="match_parent"
