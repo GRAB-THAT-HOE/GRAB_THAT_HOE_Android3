@@ -4,6 +4,7 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import kr.co.moreversal.grapthathoe.R
@@ -29,6 +30,10 @@ class CheckPhoneActivity : AppCompatActivity() {
                 val intent = Intent(this@CheckPhoneActivity, SelectJobActivity::class.java)
                 startActivity(intent)
                 finish()
+            })
+
+            onResendEvent.observe(this@CheckPhoneActivity, {
+                Toast.makeText(applicationContext, "재전송", Toast.LENGTH_SHORT).show()
             })
         }
     }
