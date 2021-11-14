@@ -51,7 +51,7 @@
             android:layout_width="match_parent"
             android:layout_height="0dp"
             android:layout_marginTop="10dp"
-            app:layout_constraintBottom_toTopOf="@+id/button"
+            app:layout_constraintBottom_toTopOf="@+id/btn_call"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
@@ -83,6 +83,7 @@
                         android:id="@+id/iv_profile"
                         android:layout_width="70dp"
                         android:layout_height="60dp"
+                        android:onClick="@{() -> vm.onClickDetailProfile()}"
                         android:layout_gravity="center_vertical"
                         android:layout_marginLeft="15dp"
                         android:src="@drawable/user" />

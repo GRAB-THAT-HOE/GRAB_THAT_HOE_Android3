@@ -73,6 +73,10 @@ class DetailFarmFragment : Fragment() {
                     pinStatus = 0
                 }
             })
+
+            onDetailProfileEvent.observe(this@DetailFarmFragment, {
+                findNavController().navigate(R.id.action_detailFarmFragment_to_detailProfileFragment)
+            })
         }
 
         return binding.root

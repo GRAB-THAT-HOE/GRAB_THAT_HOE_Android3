@@ -58,6 +58,10 @@
             app:enterAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_detailFarmFragment_to_detailProfileFragment"
+            app:destination="@id/detailProfileFragment"
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
     <fragment
         android:id="@+id/postFragment"
