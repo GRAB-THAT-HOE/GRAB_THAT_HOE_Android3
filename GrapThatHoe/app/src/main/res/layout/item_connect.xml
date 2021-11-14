@@ -17,7 +17,7 @@
             android:id="@+id/iv_profile_record"
             android:layout_width="85dp"
             android:layout_height="85dp"
-            android:src="@drawable/ic_profile_w"
+            android:src="@drawable/user"
             android:layout_marginLeft="15dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintStart_toStartOf="parent"
