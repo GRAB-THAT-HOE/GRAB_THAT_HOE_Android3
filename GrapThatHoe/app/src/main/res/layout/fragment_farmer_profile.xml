@@ -71,6 +71,7 @@
                 android:layout_width="30dp"
                 android:layout_height="30dp"
                 android:layout_gravity="center_vertical"
+                android:onClick="@{() -> vm.onClickEdit()}"
                 android:layout_marginRight="10dp"
                 android:background="@drawable/ic_btn_back"
                 android:scaleX="-1"
