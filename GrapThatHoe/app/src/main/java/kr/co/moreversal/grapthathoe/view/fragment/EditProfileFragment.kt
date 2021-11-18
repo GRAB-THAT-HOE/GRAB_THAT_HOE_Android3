@@ -54,7 +54,7 @@ class EditProfileFragment : Fragment() {
         }
 
         return binding.root
-    }
+}
 
     private fun performViewModel() {
         editProfileViewModel = ViewModelProvider(this).get(EditProfileViewModel::class.java)
