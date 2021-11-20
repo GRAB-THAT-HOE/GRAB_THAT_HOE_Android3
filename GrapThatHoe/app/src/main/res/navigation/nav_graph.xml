@@ -154,6 +154,21 @@
             android:id="@+id/action_post4Fragment_to_post3Fragment"
             app:destination="@id/post3Fragment"
             app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_post4Fragment_to_post5Fragment"
+            app:destination="@id/post5Fragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/post5Fragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.Post5Fragment"
+        android:label="Post5Fragment" >
+        <action
+            android:id="@+id/action_post5Fragment_to_post4Fragment"
+            app:destination="@id/post4Fragment"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>

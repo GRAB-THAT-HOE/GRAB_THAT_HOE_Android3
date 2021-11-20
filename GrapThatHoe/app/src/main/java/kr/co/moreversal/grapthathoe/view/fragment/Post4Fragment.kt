@@ -39,6 +39,10 @@ class Post4Fragment : Fragment() {
             onBackEvent.observe(this@Post4Fragment, {
                 findNavController().navigate(R.id.action_post3Fragment_to_post2Fragment)
             })
+
+            onNextEvent.observe(this@Post4Fragment, {
+                findNavController().navigate(R.id.action_post4Fragment_to_post5Fragment)
+            })
         }
 
         return binding.root

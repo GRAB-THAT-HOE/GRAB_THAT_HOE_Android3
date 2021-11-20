@@ -5,9 +5,14 @@ import kr.co.moreversal.grapthathoe.extension.SingleLiveEvent
 
 class Post4ViewModel: ViewModel() {
     val onBackEvent = SingleLiveEvent<Unit>()
+    val onNextEvent = SingleLiveEvent<Unit>()
 
     fun onClickBack() {
         onBackEvent.call()
+    }
+
+    fun onClickNext() {
+        onNextEvent.call()
     }
 
 }

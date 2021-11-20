@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
-            android:text="일당이 얼마인가유?"
+            android:text="농장의 위치가\n 어디인가유?"
             android:textColor="@color/black"
             android:textSize="40sp"
             app:layout_constraintStart_toStartOf="parent"
