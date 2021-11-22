@@ -184,6 +184,21 @@
             app:exitAnim="@android:anim/slide_out_right"
             app:popUpTo="@id/nav_graph"
             app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_post6Fragment_to_post7Fragment"
+            app:destination="@id/post7Fragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/post7Fragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.Post7Fragment"
+        android:label="Post7Fragment" >
+        <action
+            android:id="@+id/action_post7Fragment_to_post6Fragment"
+            app:destination="@id/post6Fragment"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>

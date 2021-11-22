@@ -12,15 +12,13 @@ import kr.co.moreversal.grapthathoe.R
 import kr.co.moreversal.grapthathoe.databinding.FragmentPost4Binding
 import kr.co.moreversal.grapthathoe.databinding.FragmentPost5Binding
 import kr.co.moreversal.grapthathoe.databinding.FragmentPost6Binding
+import kr.co.moreversal.grapthathoe.databinding.FragmentPost7Binding
 import kr.co.moreversal.grapthathoe.view.activity.MainActivity
-import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post3ViewModel
-import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post4ViewModel
-import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post5ViewModel
-import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post6ViewModel
+import kr.co.moreversal.grapthathoe.viewmodel.fragment.*
 
-class Post6Fragment : Fragment() {
-    lateinit var binding : FragmentPost6Binding
-    lateinit var post6ViewModel : Post6ViewModel
+class Post7Fragment : Fragment() {
+    lateinit var binding : FragmentPost7Binding
+    lateinit var post7ViewModel : Post7ViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -33,19 +31,15 @@ class Post6Fragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_post6,
+            R.layout.fragment_post7,
             container,
             false
         )
         performViewModel()
 
-        with(post6ViewModel) {
-            onBackEvent.observe(this@Post6Fragment, {
-                findNavController().navigate(R.id.action_post6Fragment_to_post5Fragment)
-            })
-
-            onNextEvent.observe(this@Post6Fragment, {
-                findNavController().navigate(R.id.action_post6Fragment_to_post7Fragment)
+        with(post7ViewModel) {
+            onBackEvent.observe(this@Post7Fragment, {
+                findNavController().navigate(R.id.action_post7Fragment_to_post6Fragment)
             })
         }
 
@@ -53,8 +47,8 @@ class Post6Fragment : Fragment() {
     }
 
     private fun performViewModel() {
-        post6ViewModel = ViewModelProvider(this).get(Post6ViewModel::class.java)
-        binding.vm = post6ViewModel
+        post7ViewModel = ViewModelProvider(this).get(Post7ViewModel::class.java)
+        binding.vm = post7ViewModel
         binding.lifecycleOwner = this
         binding.executePendingBindings()
     }
