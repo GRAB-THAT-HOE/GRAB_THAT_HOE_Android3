@@ -41,6 +41,11 @@ class Post7Fragment : Fragment() {
             onBackEvent.observe(this@Post7Fragment, {
                 findNavController().navigate(R.id.action_post7Fragment_to_post6Fragment)
             })
+
+            onStartDateEvent.observe(this@Post7Fragment, {
+                
+            })
+
         }
 
         return binding.root
