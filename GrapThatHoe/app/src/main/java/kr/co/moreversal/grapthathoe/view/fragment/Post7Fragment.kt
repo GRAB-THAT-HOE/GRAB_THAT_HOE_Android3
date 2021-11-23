@@ -1,5 +1,6 @@
 package kr.co.moreversal.grapthathoe.view.fragment
 
+import android.app.DatePickerDialog
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -9,16 +10,16 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import kr.co.moreversal.grapthathoe.R
-import kr.co.moreversal.grapthathoe.databinding.FragmentPost4Binding
-import kr.co.moreversal.grapthathoe.databinding.FragmentPost5Binding
-import kr.co.moreversal.grapthathoe.databinding.FragmentPost6Binding
 import kr.co.moreversal.grapthathoe.databinding.FragmentPost7Binding
 import kr.co.moreversal.grapthathoe.view.activity.MainActivity
 import kr.co.moreversal.grapthathoe.viewmodel.fragment.*
+import java.util.*
 
 class Post7Fragment : Fragment() {
     lateinit var binding : FragmentPost7Binding
     lateinit var post7ViewModel : Post7ViewModel
+
+    var dateString: String = ""
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -43,7 +44,11 @@ class Post7Fragment : Fragment() {
             })
 
             onStartDateEvent.observe(this@Post7Fragment, {
-                
+                val calendar = Calendar.getInstance()    //캘린더뷰 만들기
+                val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+                    dateString = "${year}년 ${month+1}월 ${dayOfMonth}일"
+                }
+                context?.let { it1 -> DatePickerDialog(it1, dateSetListener, calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show() }
             })
 
         }
