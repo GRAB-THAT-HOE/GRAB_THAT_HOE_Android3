@@ -47,6 +47,16 @@ class Post7Fragment : Fragment() {
                 val calendar = Calendar.getInstance()    //캘린더뷰 만들기
                 val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
                     dateString = "${year}년 ${month+1}월 ${dayOfMonth}일"
+                    binding.tvStartDate.text = dateString
+                }
+                context?.let { it1 -> DatePickerDialog(it1, dateSetListener, calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show() }
+            })
+
+            onEndDateEvent.observe(this@Post7Fragment, {
+                val calendar = Calendar.getInstance()    //캘린더뷰 만들기
+                val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
+                    dateString = "${year}년 ${month+1}월 ${dayOfMonth}일"
+                    binding.tvEndDate.text = dateString
                 }
                 context?.let { it1 -> DatePickerDialog(it1, dateSetListener, calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show() }
             })
