@@ -15,7 +15,7 @@
         android:layout_height="match_parent"
         tools:context=".view.fragment.FarmerChatFragment">
 
-        <ImageButton
+        <ImageView
             android:id="@+id/btn_back_select"
             android:layout_width="30dp"
             android:layout_height="30dp"

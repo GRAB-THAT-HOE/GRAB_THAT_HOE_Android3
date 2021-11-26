@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="kr.co.moreversal.grapthathoe.viewmodel.fragment.Post3ViewModel" />
+            type="kr.co.moreversal.grapthathoe.viewmodel.fragment.Post4ViewModel" />
 
     </data>
 
@@ -31,28 +31,39 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
-            android:text="자세하게 \n일을 설명해주세유"
+            android:text="일당이 얼마인가유?"
             android:textColor="@color/black"
             android:textSize="40sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_back_select" />
 
         <EditText
-            android:id="@+id/edit_concrete_explain"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:hint="자세하게 일을 설명해주세요.(최대 300글자)"
-            android:maxLength="300"
-            android:gravity="top"
-            android:textColor="@color/black"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="50dp"
-            android:textSize="25sp"
-            android:background="@drawable/edittext_long_length"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:id="@+id/edit_salary"
+            android:layout_width="0dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="40dp"
+            android:textSize="20sp"
+            android:inputType="number"
+            android:background="@drawable/edittext_normal"
+            android:hint="일당"
+            app:layout_constraintBottom_toTopOf="@+id/btn_next"
+            app:layout_constraintEnd_toStartOf="@+id/textView5"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="40dp"
+            android:fontFamily="@font/mainfont"
+            android:text="원"
+            android:textColor="@color/black"
+            android:textSize="30sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_next"

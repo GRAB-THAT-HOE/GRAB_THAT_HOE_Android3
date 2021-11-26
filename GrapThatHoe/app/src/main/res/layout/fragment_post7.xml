@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="kr.co.moreversal.grapthathoe.viewmodel.fragment.Post3ViewModel" />
+            type="kr.co.moreversal.grapthathoe.viewmodel.fragment.Post7ViewModel" />
 
     </data>
 
@@ -31,28 +31,60 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
-            android:text="자세하게 \n일을 설명해주세유"
+            android:text="근무 기간이\n어떻게 되나요?"
             android:textColor="@color/black"
             android:textSize="40sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_back_select" />
 
-        <EditText
-            android:id="@+id/edit_concrete_explain"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:hint="자세하게 일을 설명해주세요.(최대 300글자)"
-            android:maxLength="300"
-            android:gravity="top"
+        <TextView
+            android:id="@+id/tv_start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="시작 날짜"
             android:textColor="@color/black"
-            android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="50dp"
             android:textSize="25sp"
-            android:background="@drawable/edittext_long_length"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_start_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_start_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="40dp"
+            android:onClick="@{() -> vm.onClickStartDate()}"
+            android:text="근무 시작 날짜 설정"
+            android:textSize="20sp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_next"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/tv_end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="끝 날짜"
+            android:textColor="@color/black"
+            android:textSize="25sp"
+            android:layout_marginBottom="35dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_end_date"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <Button
+            android:id="@+id/btn_end_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="근무 끝 날짜 설정"
+            android:textSize="20sp"
+            android:onClick="@{() -> vm.onClickEndDate()}"
+            android:layout_marginBottom="40dp"
+            app:layout_constraintBottom_toTopOf="@+id/btn_next"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_next"
@@ -61,8 +93,8 @@
             android:layout_marginTop="100dp"
             android:background="@drawable/btn_design"
             android:fontFamily="@font/mainfont"
-            android:onClick="@{() -> vm.onClickNext()}"
             android:text="다음"
+            android:onClick="@{() -> vm.onClickNext()}"
             android:layout_marginBottom="50dp"
             android:textColor="@color/white"
             android:textSize="30sp"

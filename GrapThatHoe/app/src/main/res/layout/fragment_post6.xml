@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="kr.co.moreversal.grapthathoe.viewmodel.fragment.Post3ViewModel" />
+            type="kr.co.moreversal.grapthathoe.viewmodel.fragment.Post6ViewModel" />
 
     </data>
 
@@ -31,28 +31,60 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
-            android:text="자세하게 \n일을 설명해주세유"
+            android:text="선택해주세유"
             android:textColor="@color/black"
             android:textSize="40sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_back_select" />
 
-        <EditText
-            android:id="@+id/edit_concrete_explain"
-            android:layout_width="match_parent"
-            android:layout_height="350dp"
-            android:hint="자세하게 일을 설명해주세요.(최대 300글자)"
-            android:maxLength="300"
-            android:gravity="top"
-            android:textColor="@color/black"
+        <CheckBox
+            android:id="@+id/check_sleep"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="숙박 제공을 하나유?"
             android:layout_marginLeft="20dp"
-            android:layout_marginRight="20dp"
-            android:layout_marginTop="50dp"
-            android:textSize="25sp"
-            android:background="@drawable/edittext_long_length"
-            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="40dp"
+            android:textSize="20sp"
+            android:buttonTint="@color/main"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <CheckBox
+            android:id="@+id/check_food"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="음식 제공을 하나유?"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:buttonTint="@color/main"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/check_sleep" />
+
+        <CheckBox
+            android:id="@+id/check_hurt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="장애인 채용 동의"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:buttonTint="@color/main"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/check_food" />
+
+        <CheckBox
+            android:id="@+id/check_for"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="외국인 채용 동의"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:textSize="20sp"
+            android:buttonTint="@color/main"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/check_hurt" />
+
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_next"
@@ -61,8 +93,8 @@
             android:layout_marginTop="100dp"
             android:background="@drawable/btn_design"
             android:fontFamily="@font/mainfont"
-            android:onClick="@{() -> vm.onClickNext()}"
             android:text="다음"
+            android:onClick="@{() -> vm.onClickNext()}"
             android:layout_marginBottom="50dp"
             android:textColor="@color/white"
             android:textSize="30sp"

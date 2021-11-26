@@ -9,16 +9,18 @@ import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
 import kr.co.moreversal.grapthathoe.R
-import kr.co.moreversal.grapthathoe.databinding.FragmentPost2Binding
-import kr.co.moreversal.grapthathoe.databinding.FragmentPost3Binding
+import kr.co.moreversal.grapthathoe.databinding.FragmentPost4Binding
+import kr.co.moreversal.grapthathoe.databinding.FragmentPost5Binding
+import kr.co.moreversal.grapthathoe.databinding.FragmentPost6Binding
 import kr.co.moreversal.grapthathoe.view.activity.MainActivity
-import kr.co.moreversal.grapthathoe.viewmodel.fragment.PostViewModel
-import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post2ViewModel
 import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post3ViewModel
+import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post4ViewModel
+import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post5ViewModel
+import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post6ViewModel
 
-class Post3Fragment : Fragment() {
-    lateinit var binding : FragmentPost3Binding
-    lateinit var post3ViewModel : Post3ViewModel
+class Post6Fragment : Fragment() {
+    lateinit var binding : FragmentPost6Binding
+    lateinit var post6ViewModel : Post6ViewModel
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -31,19 +33,19 @@ class Post3Fragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_post3,
+            R.layout.fragment_post6,
             container,
             false
         )
         performViewModel()
 
-        with(post3ViewModel) {
-            onBackEvent.observe(this@Post3Fragment, {
-                findNavController().navigate(R.id.action_post3Fragment_to_post2Fragment)
+        with(post6ViewModel) {
+            onBackEvent.observe(this@Post6Fragment, {
+                findNavController().navigate(R.id.action_post6Fragment_to_post5Fragment)
             })
 
-            onNextEvent.observe(this@Post3Fragment, {
-                findNavController().navigate(R.id.action_post3Fragment_to_post4Fragment)
+            onNextEvent.observe(this@Post6Fragment, {
+                findNavController().navigate(R.id.action_post6Fragment_to_post7Fragment)
             })
         }
 
@@ -51,8 +53,8 @@ class Post3Fragment : Fragment() {
     }
 
     private fun performViewModel() {
-        post3ViewModel = ViewModelProvider(this).get(Post3ViewModel::class.java)
-        binding.vm = post3ViewModel
+        post6ViewModel = ViewModelProvider(this).get(Post6ViewModel::class.java)
+        binding.vm = post6ViewModel
         binding.lifecycleOwner = this
         binding.executePendingBindings()
     }

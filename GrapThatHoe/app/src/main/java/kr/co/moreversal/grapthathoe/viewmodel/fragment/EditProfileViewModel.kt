@@ -3,18 +3,15 @@ package kr.co.moreversal.grapthathoe.viewmodel.fragment
 import androidx.lifecycle.ViewModel
 import kr.co.moreversal.grapthathoe.extension.SingleLiveEvent
 
-class Post3ViewModel: ViewModel() {
+class EditProfileViewModel: ViewModel() {
     val onBackEvent = SingleLiveEvent<Unit>()
-    val onNextEvent = SingleLiveEvent<Unit>()
+    val onChangeImgEvent = SingleLiveEvent<Unit>()
 
     fun onClickBack() {
         onBackEvent.call()
     }
 
-    fun onClickNext() {
-        onNextEvent.call()
+    fun onClickChangeImg() {
+        onChangeImgEvent.call()
     }
-
-
-
 }
