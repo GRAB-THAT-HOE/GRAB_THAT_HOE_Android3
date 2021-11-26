@@ -43,6 +43,10 @@ class Post7Fragment : Fragment() {
                 findNavController().navigate(R.id.action_post7Fragment_to_post6Fragment)
             })
 
+            onNextEvent.observe(this@Post7Fragment, {
+                findNavController().navigate(R.id.action_post7Fragment_to_post8Fragment)
+            })
+
             onStartDateEvent.observe(this@Post7Fragment, {
                 val calendar = Calendar.getInstance()    //캘린더뷰 만들기
                 val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->

@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="kr.co.moreversal.grapthathoe.viewmodel.fragment.Post7ViewModel" />
+            type="kr.co.moreversal.grapthathoe.viewmodel.fragment.Post8ViewModel" />
 
     </data>
 
@@ -31,7 +31,7 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
-            android:text="근무 기간이\n어떻게 되나요?"
+            android:text="근무 시간이\n어떻게 되나요?"
             android:textColor="@color/black"
             android:textSize="40sp"
             app:layout_constraintStart_toStartOf="parent"
@@ -41,7 +41,7 @@
             android:id="@+id/tv_start_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="시작 날짜"
+            android:text="시작 시간"
             android:textColor="@color/black"
             android:textSize="25sp"
             android:layout_marginBottom="35dp"
@@ -66,7 +66,7 @@
             android:id="@+id/tv_end_date"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="끝 날짜"
+            android:text="끝 시간"
             android:textColor="@color/black"
             android:textSize="25sp"
             android:layout_marginBottom="35dp"
@@ -94,7 +94,6 @@
             android:background="@drawable/btn_design"
             android:fontFamily="@font/mainfont"
             android:text="다음"
-            android:onClick="@{() -> vm.onClickNext()}"
             android:layout_marginBottom="50dp"
             android:textColor="@color/white"
             android:textSize="30sp"
