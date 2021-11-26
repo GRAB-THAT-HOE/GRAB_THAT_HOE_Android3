@@ -6,7 +6,7 @@
     <data>
         <variable
             name="vm"
-            type="kr.co.moreversal.grapthathoe.viewmodel.fragment.Post8ViewModel" />
+            type="kr.co.moreversal.grapthathoe.viewmodel.fragment.Post9ViewModel" />
 
     </data>
 
@@ -31,70 +31,47 @@
             android:layout_height="wrap_content"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="40dp"
-            android:text="근무 시간이\n어떻게 되나요?"
+            android:text="휴식 시간이\n어떻게 되나요?"
             android:textColor="@color/black"
             android:textSize="40sp"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/btn_back_select" />
 
         <TextView
-            android:id="@+id/tv_start_time"
+            android:id="@+id/tv_refresh_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="시작 시간"
+            android:text="휴식 시간"
             android:textColor="@color/black"
             android:textSize="25sp"
             android:layout_marginBottom="35dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_start_time"
+            app:layout_constraintBottom_toTopOf="@+id/btn_refresh_time"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />
 
         <Button
-            android:id="@+id/btn_start_time"
+            android:id="@+id/btn_refresh_time"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginBottom="40dp"
-            android:onClick="@{() -> vm.onClickStartTime()}"
-            android:text="근무 시작 시간 설정"
+            android:layout_marginTop="70dp"
+            android:onClick="@{() -> vm.onClickRefreshTime()}"
+            android:text="휴식 시작 설정"
             android:textSize="20sp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_next"
+            app:layout_constraintBottom_toTopOf="@+id/btn_post"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView4" />
 
-        <TextView
-            android:id="@+id/tv_end_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="끝 시간"
-            android:textColor="@color/black"
-            android:textSize="25sp"
-            android:layout_marginBottom="35dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_end_time"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
-        <Button
-            android:id="@+id/btn_end_time"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="근무 끝 시간 설정"
-            android:textSize="20sp"
-            android:onClick="@{() -> vm.onClickEndTime()}"
-            android:layout_marginBottom="40dp"
-            app:layout_constraintBottom_toTopOf="@+id/btn_next"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent" />
-
         <androidx.appcompat.widget.AppCompatButton
-            android:id="@+id/btn_next"
+            android:id="@+id/btn_post"
             android:layout_width="150dp"
             android:layout_height="60dp"
             android:layout_marginTop="100dp"
             android:background="@drawable/btn_design"
             android:fontFamily="@font/mainfont"
-            android:text="다음"
-            android:onClick="@{() -> vm.onClickNext()}"
+            android:onClick="@{() -> vm.onClickPost()}"
+            android:text="등록하기"
             android:layout_marginBottom="50dp"
             android:textColor="@color/white"
             android:textSize="30sp"

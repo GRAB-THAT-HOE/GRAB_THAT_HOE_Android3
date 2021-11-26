@@ -13,13 +13,14 @@ import androidx.navigation.fragment.findNavController
 import kr.co.moreversal.grapthathoe.R
 import kr.co.moreversal.grapthathoe.databinding.FragmentPost7Binding
 import kr.co.moreversal.grapthathoe.databinding.FragmentPost8Binding
+import kr.co.moreversal.grapthathoe.databinding.FragmentPost9Binding
 import kr.co.moreversal.grapthathoe.view.activity.MainActivity
 import kr.co.moreversal.grapthathoe.viewmodel.fragment.*
 import java.util.*
 
-class Post8Fragment : Fragment() {
-    lateinit var binding : FragmentPost8Binding
-    lateinit var post8ViewModel: Post8ViewModel
+class Post9Fragment : Fragment() {
+    lateinit var binding : FragmentPost9Binding
+    lateinit var post9ViewModel: Post9ViewModel
 
     var timeString: String = ""
 
@@ -34,47 +35,37 @@ class Post8Fragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_post8,
+            R.layout.fragment_post9,
             container,
             false
         )
         performViewModel()
 
-        with(post8ViewModel) {
-            onBackEvent.observe(this@Post8Fragment, {
-                findNavController().navigate(R.id.action_post8Fragment_to_post7Fragment)
+        with(post9ViewModel) {
+            onBackEvent.observe(this@Post9Fragment, {
+                findNavController().navigate(R.id.action_post9Fragment_to_post8Fragment)
             })
 
-            onNextEvent.observe(this@Post8Fragment, {
-                findNavController().navigate(R.id.action_post8Fragment_to_post9Fragment)
+            onPostEvent.observe(this@Post9Fragment, {
+                findNavController().navigate(R.id.action_post9Fragment_to_farmerHomeFragment)
             })
 
-            onStartTimeEvent.observe(this@Post8Fragment, {
+            onRefreshTimeEvent.observe(this@Post9Fragment, {
                 val time = Calendar.getInstance()
                 val timeSetListener = TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
-                    timeString = "${hourOfDay}시 ${minute}분"
-                    binding.tvStartTime.text = timeString
+                    timeString = "${hourOfDay}시간 ${minute}분"
+                    binding.tvRefreshTime.text = timeString
                 }
                 TimePickerDialog(context, timeSetListener, time.get(Calendar.HOUR_OF_DAY), time.get(Calendar.MINUTE),true).show()
             })
-
-            onEndTimeEvent.observe(this@Post8Fragment, {
-                val time = Calendar.getInstance()
-                val timeSetListener = TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
-                    timeString = "${hourOfDay}시 ${minute}분"
-                    binding.tvEndTime.text = timeString
-                }
-                TimePickerDialog(context, timeSetListener, time.get(Calendar.HOUR_OF_DAY), time.get(Calendar.MINUTE),true).show()
-            })
-
         }
 
         return binding.root
     }
 
     private fun performViewModel() {
-        post8ViewModel = ViewModelProvider(this).get(Post8ViewModel::class.java)
-        binding.vm = post8ViewModel
+        post9ViewModel = ViewModelProvider(this).get(Post9ViewModel::class.java)
+        binding.vm = post9ViewModel
         binding.lifecycleOwner = this
         binding.executePendingBindings()
     }

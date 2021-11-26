@@ -212,6 +212,23 @@
             android:id="@+id/action_post8Fragment_to_post7Fragment"
             app:destination="@id/post7Fragment"
             app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_post8Fragment_to_post9Fragment"
+            app:destination="@id/post9Fragment"
+            app:enterAnim="@android:anim/fade_in" />
+    </fragment>
+    <fragment
+        android:id="@+id/post9Fragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.Post9Fragment"
+        android:label="Post9Fragment" >
+        <action
+            android:id="@+id/action_post9Fragment_to_post8Fragment"
+            app:destination="@id/post8Fragment"
+            app:exitAnim="@android:anim/slide_out_right" />
+        <action
+            android:id="@+id/action_post9Fragment_to_farmerHomeFragment"
+            app:destination="@id/farmerHomeFragment"
+            app:enterAnim="@android:anim/fade_in" />
     </fragment>
 
 </navigation>

@@ -5,19 +5,24 @@ import kr.co.moreversal.grapthathoe.extension.SingleLiveEvent
 
 class Post8ViewModel: ViewModel() {
     val onBackEvent = SingleLiveEvent<Unit>()
-    val onStartDateEvent = SingleLiveEvent<Unit>()
-    val onEndDateEvent = SingleLiveEvent<Unit>()
+    val onNextEvent = SingleLiveEvent<Unit>()
+    val onStartTimeEvent = SingleLiveEvent<Unit>()
+    val onEndTimeEvent = SingleLiveEvent<Unit>()
 
     fun onClickBack() {
         onBackEvent.call()
     }
 
-    fun onClickStartDate() {
-        onStartDateEvent.call()
+    fun onClickNext() {
+        onNextEvent.call()
     }
 
-    fun onClickEndDate() {
-        onEndDateEvent.call()
+    fun onClickStartTime() {
+        onStartTimeEvent.call()
+    }
+
+    fun onClickEndTime() {
+        onEndTimeEvent.call()
     }
 
 }
