@@ -15,7 +15,8 @@ import kr.co.moreversal.grapthathoe.view.activity.MainActivity
 import kr.co.moreversal.grapthathoe.view.adapter.FarmerHomeRecyclerAdapter
 import kr.co.moreversal.grapthathoe.viewmodel.fragment.FarmerHomeViewModel
 
-class FarmerHomeFragment : Fragment() {
+class
+FarmerHomeFragment : Fragment() {
     lateinit var binding : FragmentFarmerHomeBinding
     lateinit var farmerHomeViewModel: FarmerHomeViewModel
 
