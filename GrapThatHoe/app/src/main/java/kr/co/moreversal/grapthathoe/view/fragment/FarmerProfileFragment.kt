@@ -24,7 +24,7 @@ class FarmerProfileFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        (activity as? MainActivity)?.setNavVisible(true)
+        (activity as? MainActivity)?.setProfileVisible(true)
     }
 
     override fun onCreateView(

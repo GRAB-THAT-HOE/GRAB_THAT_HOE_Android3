@@ -36,7 +36,7 @@ class SettingFragment : Fragment() {
     ): View? {
         binding = DataBindingUtil.inflate(
             inflater,
-            R.layout.fragment_post9,
+            R.layout.fragment_setting,
             container,
             false
         )
@@ -44,7 +44,7 @@ class SettingFragment : Fragment() {
 
         with(settingViewModel) {
             onBackEvent.observe(this@SettingFragment, {
-                findNavController().navigate(R.id.action_post9Fragment_to_post8Fragment)
+                findNavController().navigate(R.id.action_settingFragment_to_farmerProfileFragment)
             })
         }
 

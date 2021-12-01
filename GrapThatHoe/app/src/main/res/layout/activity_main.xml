@@ -40,12 +40,25 @@
                 android:id="@+id/btn_alarm"
                 android:layout_width="27dp"
                 android:layout_height="35dp"
-                android:layout_marginRight="20dp"
                 android:background="@drawable/ic_btn_alarm"
                 android:scaleType="center"
+                android:layout_marginRight="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@+id/btn_setting"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/btn_setting"
+                android:layout_width="35dp"
+                android:layout_height="35dp"
+                android:onClick="@{() -> vm.onClickSetting()}"
+                android:src="@drawable/ic_btn_setting"
+                android:layout_marginRight="10dp"
+                android:visibility="gone"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintTop_toTopOf="parent" />
+
 
             <View
                 android:layout_width="match_parent"
