@@ -7,7 +7,6 @@
         <variable
             name="vm"
             type="kr.co.moreversal.grapthathoe.viewmodel.fragment.SettingViewModel" />
-
     </data>
 
     <androidx.constraintlayout.widget.ConstraintLayout
