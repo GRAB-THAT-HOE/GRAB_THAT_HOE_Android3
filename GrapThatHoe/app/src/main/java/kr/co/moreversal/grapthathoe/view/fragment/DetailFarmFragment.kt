@@ -96,9 +96,9 @@ class DetailFarmFragment : Fragment() {
 
         farmImgList.apply {
             add(FarmImg("https://nimage.g-enews.com/phpwas/restmb_allidxmake.php?idx=5&simg=2018073116220101420c77c10352218396190229.jpg"))
-            add(FarmImg("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg"))
-            add(FarmImg("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg"))
-            add(FarmImg("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg"))
+            add(FarmImg("http://cdn.ggilbo.com/news/photo/201905/670907_514704_5449.jpg"))
+            add(FarmImg("https://www.sonohotelsresorts.com/img/saupjang/cs/images/travel/ex4_2.jpg"))
+            add(FarmImg("https://www.kyongbuk.co.kr/news/photo/201608/967889_245925_3417.jpg"))
             add(FarmImg("https://www.dementianews.co.kr/news/photo/202012/3429_6904_018.jpg"))
         }
         detailFarmAdapter.farmImgList = farmImgList
