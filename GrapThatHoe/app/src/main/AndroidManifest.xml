@@ -16,6 +16,7 @@
         android:usesCleartextTraffic="true">
         <activity
             android:name=".view.activity.InAppActivity"
+            android:screenOrientation="portrait"
             android:exported="true" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -25,22 +26,26 @@
         </activity>
         <activity
             android:name=".view.activity.CreateProfileActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".view.activity.SelectJobActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".view.activity.CheckPhoneActivity"
+            android:screenOrientation="portrait"
             android:exported="false" />
         <activity
             android:name=".view.activity.StartActivity"
             android:exported="false"
+            android:screenOrientation="portrait"
             android:label="@string/title_activity_login"
             android:theme="@style/Theme.GrapThatHoe.NoActionBar" />
         <activity
             android:name=".view.activity.MainActivity"
+            android:screenOrientation="portrait"
             android:exported="true">
-
         </activity>
     </application>
 

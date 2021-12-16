@@ -20,6 +20,10 @@ class CheckPhoneActivity : AppCompatActivity() {
         performDataBinding()
 
         with(checkPhoneViewModel) {
+            message.observe(this@CheckPhoneActivity, {
+                Toast.makeText(this@CheckPhoneActivity, "${message.value}", Toast.LENGTH_SHORT).show()
+            })
+            
             onResponseEvent.observe(this@CheckPhoneActivity, {
                 binding.editCheckNum.visibility = View.VISIBLE
                 binding.btnCheck.visibility = View.VISIBLE

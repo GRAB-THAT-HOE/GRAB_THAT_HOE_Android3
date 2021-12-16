@@ -10,7 +10,7 @@ import retrofit2.create
 import java.util.concurrent.TimeUnit
 
 object RetrofitClient {
-    private const val BASE_URL = "http://10.80.161.63:4000/api/v1/"
+    private const val BASE_URL = "http://10.80.163.231:4000/api/v1/"
 
     val signInterface : Sign
 
