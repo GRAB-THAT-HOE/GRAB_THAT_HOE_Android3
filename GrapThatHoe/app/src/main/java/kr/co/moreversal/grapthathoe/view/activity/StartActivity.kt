@@ -6,13 +6,10 @@ import android.os.Bundle
 import android.util.Log
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import androidx.core.content.edit
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import kr.co.moreversal.grapthathoe.R
 import kr.co.moreversal.grapthathoe.databinding.ActivityStartBinding
-import kr.co.moreversal.grapthathoe.network.model.RetrofitClient
-import kr.co.moreversal.grapthathoe.network.request.LoginRequest
 import kr.co.moreversal.grapthathoe.viewmodel.activity.StartViewModel
 
 

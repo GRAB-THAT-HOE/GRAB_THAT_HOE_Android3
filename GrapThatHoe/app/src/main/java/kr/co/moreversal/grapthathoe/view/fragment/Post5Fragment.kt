@@ -43,6 +43,7 @@ class Post5Fragment : Fragment() {
             })
 
             onNextEvent.observe(this@Post5Fragment, {
+                Post10Fragment.Mainlocation = location.value.toString()
                 findNavController().navigate(R.id.action_post5Fragment_to_post6Fragment)
             })
         }

@@ -45,6 +45,7 @@
             android:textSize="20sp"
             android:inputType="number"
             android:background="@drawable/edittext_normal"
+            android:text="@={vm.cost}"
             android:hint="일당"
             app:layout_constraintBottom_toTopOf="@+id/btn_next"
             app:layout_constraintEnd_toStartOf="@+id/textView5"

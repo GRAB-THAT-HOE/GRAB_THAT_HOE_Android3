@@ -11,6 +11,7 @@ import androidx.navigation.fragment.findNavController
 import kr.co.moreversal.grapthathoe.R
 import kr.co.moreversal.grapthathoe.databinding.FragmentPost4Binding
 import kr.co.moreversal.grapthathoe.view.activity.MainActivity
+import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post10ViewModel
 import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post3ViewModel
 import kr.co.moreversal.grapthathoe.viewmodel.fragment.Post4ViewModel
 
@@ -41,6 +42,7 @@ class Post4Fragment : Fragment() {
             })
 
             onNextEvent.observe(this@Post4Fragment, {
+                Post10Fragment.Salary = cost.value!!.toInt()
                 findNavController().navigate(R.id.action_post4Fragment_to_post5Fragment)
             })
         }

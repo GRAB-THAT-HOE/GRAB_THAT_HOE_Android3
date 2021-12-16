@@ -40,8 +40,10 @@ class Post2Fragment : Fragment() {
             })
 
             onNextEvent.observe(this@Post2Fragment, {
+                Post10Fragment.Explanation = subExplain.value.toString()
                 findNavController().navigate(R.id.action_post2Fragment_to_post3Fragment)
             })
+
         }
 
         return binding.root

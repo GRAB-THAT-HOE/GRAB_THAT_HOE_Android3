@@ -20,6 +20,13 @@ class Post7Fragment : Fragment() {
     lateinit var post7ViewModel : Post7ViewModel
 
     var dateString: String = ""
+    var SYear : Int = 0
+    var SMonth : Int = 0
+    var SDay : Int = 0
+    var EYear : Int = 0
+    var EMonth : Int = 0
+    var EDay : Int = 0
+
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -44,6 +51,12 @@ class Post7Fragment : Fragment() {
             })
 
             onNextEvent.observe(this@Post7Fragment, {
+                Post10Fragment.StartDateYear = SYear
+                Post10Fragment.StartDateMonth = SMonth
+                Post10Fragment.StartDateDay = SDay
+                Post10Fragment.EndDateYear = EYear
+                Post10Fragment.EndDateMonth = EMonth
+                Post10Fragment.EndDateDay = EDay
                 findNavController().navigate(R.id.action_post7Fragment_to_post8Fragment)
             })
 
@@ -51,6 +64,9 @@ class Post7Fragment : Fragment() {
                 val calendar = Calendar.getInstance()    //캘린더뷰 만들기
                 val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
                     dateString = "${year}년 ${month+1}월 ${dayOfMonth}일"
+                    SYear = year
+                    SMonth = month + 1
+                    SDay = dayOfMonth
                     binding.tvStartDate.text = dateString
                 }
                 context?.let { it1 -> DatePickerDialog(it1, dateSetListener, calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show() }
@@ -60,6 +76,9 @@ class Post7Fragment : Fragment() {
                 val calendar = Calendar.getInstance()    //캘린더뷰 만들기
                 val dateSetListener = DatePickerDialog.OnDateSetListener { view, year, month, dayOfMonth ->
                     dateString = "${year}년 ${month+1}월 ${dayOfMonth}일"
+                    EYear = year
+                    EMonth = month + 1
+                    EDay = dayOfMonth
                     binding.tvEndDate.text = dateString
                 }
                 context?.let { it1 -> DatePickerDialog(it1, dateSetListener, calendar.get(Calendar.YEAR),calendar.get(Calendar.MONTH),calendar.get(Calendar.DAY_OF_MONTH)).show() }

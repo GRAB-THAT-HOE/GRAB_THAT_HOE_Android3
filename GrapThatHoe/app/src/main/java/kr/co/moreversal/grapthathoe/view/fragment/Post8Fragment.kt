@@ -22,6 +22,8 @@ class Post8Fragment : Fragment() {
     lateinit var post8ViewModel: Post8ViewModel
 
     var timeString: String = ""
+    var STime : Int = 0
+    var ETime : Int = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -46,6 +48,8 @@ class Post8Fragment : Fragment() {
             })
 
             onNextEvent.observe(this@Post8Fragment, {
+                Post10Fragment.StartTime = STime
+                Post10Fragment.EndTime = ETime
                 findNavController().navigate(R.id.action_post8Fragment_to_post9Fragment)
             })
 
@@ -53,6 +57,7 @@ class Post8Fragment : Fragment() {
                 val time = Calendar.getInstance()
                 val timeSetListener = TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
                     timeString = "${hourOfDay}시 ${minute}분"
+                    STime = hourOfDay
                     binding.tvStartTime.text = timeString
                 }
                 TimePickerDialog(context, timeSetListener, time.get(Calendar.HOUR_OF_DAY), time.get(Calendar.MINUTE),true).show()
@@ -62,6 +67,7 @@ class Post8Fragment : Fragment() {
                 val time = Calendar.getInstance()
                 val timeSetListener = TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
                     timeString = "${hourOfDay}시 ${minute}분"
+                    ETime = hourOfDay
                     binding.tvEndTime.text = timeString
                 }
                 TimePickerDialog(context, timeSetListener, time.get(Calendar.HOUR_OF_DAY), time.get(Calendar.MINUTE),true).show()
