@@ -43,7 +43,7 @@ class CreateProfileActivity : AppCompatActivity() {
                 val sharedPref = applicationContext.getSharedPreferences(TOKEN_PREFERENCE, Context.MODE_PRIVATE)
 
                 with(sharedPref.edit()) {
-                    putInt("userPhone", pNum)
+                    putInt("phone", pNum)
                     putString("token", it)
                     apply()
                 }
