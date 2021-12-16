@@ -1,7 +1,9 @@
 package kr.co.moreversal.grapthathoe.view.fragment
 
+import android.app.Activity
 import android.app.DatePickerDialog
 import android.app.TimePickerDialog
+import android.content.Intent
 import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -15,6 +17,8 @@ import kr.co.moreversal.grapthathoe.databinding.FragmentPost7Binding
 import kr.co.moreversal.grapthathoe.databinding.FragmentPost8Binding
 import kr.co.moreversal.grapthathoe.databinding.FragmentPost9Binding
 import kr.co.moreversal.grapthathoe.databinding.FragmentSettingBinding
+import kr.co.moreversal.grapthathoe.view.activity.CreateProfileActivity
+import kr.co.moreversal.grapthathoe.view.activity.InAppActivity
 import kr.co.moreversal.grapthathoe.view.activity.MainActivity
 import kr.co.moreversal.grapthathoe.viewmodel.fragment.*
 import java.util.*
@@ -45,6 +49,18 @@ class SettingFragment : Fragment() {
         with(settingViewModel) {
             onBackEvent.observe(this@SettingFragment, {
                 findNavController().navigate(R.id.action_settingFragment_to_farmerProfileFragment)
+            })
+
+            onLogoutEvent.observe(this@SettingFragment, {
+                val logoutPref = activity?.getSharedPreferences(CreateProfileActivity.TOKEN_PREFERENCE, Activity.MODE_PRIVATE)
+                with(logoutPref?.edit()) {
+                    this?.clear()
+                    this?.commit()
+                }
+
+                val intent = Intent(activity, InAppActivity::class.java)
+                startActivity(intent)
+                activity?.finish()
             })
         }
 
