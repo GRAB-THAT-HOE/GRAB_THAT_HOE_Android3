@@ -35,7 +35,7 @@ class CheckPhoneViewModel: ViewModel() {
                 } else {
                     val errorBody = RetrofitClient.instance.responseBodyConverter<ErrorResponse>(
                         ErrorResponse::class.java, ErrorResponse::class.java.annotations).convert(response.errorBody())
-                    message.value = errorBody?.error
+                    message.value = errorBody?.message
                     Log.d("Retrofit2", "onResponse: ${response.code()}")
                 }
             }
@@ -48,6 +48,7 @@ class CheckPhoneViewModel: ViewModel() {
 
     fun onClickResend() {
         onClickResponse()
+        onResendEvent.call()
     }
 
     fun onClickCheck() {
@@ -66,7 +67,7 @@ class CheckPhoneViewModel: ViewModel() {
                     } else {
                         val errorBody = RetrofitClient.instance.responseBodyConverter<ErrorResponse>(
                             ErrorResponse::class.java, ErrorResponse::class.java.annotations).convert(response.errorBody())
-                        message.value = errorBody?.error
+                        message.value = errorBody?.message
                         Log.d("Retrofit2", "onResponse: ${response.code()}")
                     }
                 }

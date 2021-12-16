@@ -30,16 +30,18 @@
             android:id="@+id/btn_select_farmer"
             android:layout_width="180dp"
             android:layout_height="130dp"
+            android:layout_marginBottom="40dp"
             android:background="@drawable/btn_select"
             android:fontFamily="@font/mainfont"
             android:onClick="@{() -> vm.onClickFarmer()}"
             android:text="농장주"
-            android:layout_marginBottom="40dp"
             android:textSize="40sp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.502"
             app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.502" />
 
         <androidx.appcompat.widget.AppCompatButton
             android:id="@+id/btn_select_worker"

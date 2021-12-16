@@ -34,12 +34,13 @@ class CheckPhoneActivity : AppCompatActivity() {
 
             onCheckEvent.observe(this@CheckPhoneActivity, {
                 val intent = Intent(this@CheckPhoneActivity, SelectJobActivity::class.java)
+
                 startActivity(intent)
                 finish()
             })
 
             onResendEvent.observe(this@CheckPhoneActivity, {
-                Toast.makeText(applicationContext, "재전송", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "재전송이 되었습니다.", Toast.LENGTH_SHORT).show()
             })
         }
     }
