@@ -35,7 +35,7 @@
             android:layout_margin="5dp"
             android:text="아이디 설정"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -48,7 +48,7 @@
             android:layout_margin="5dp"
             android:text="전화번호 설정"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -60,7 +60,7 @@
             android:layout_margin="5dp"
             android:text="이메일 설정"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -72,7 +72,7 @@
             android:layout_margin="5dp"
             android:text="비밀번호 설정"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"
@@ -82,9 +82,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp"
+            android:onClick="@{() -> vm.onClickLogout()}"
             android:text="로그아웃"
             android:textColor="@color/black"
-            android:textSize="20sp" />
+            android:textSize="25sp" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1dp"

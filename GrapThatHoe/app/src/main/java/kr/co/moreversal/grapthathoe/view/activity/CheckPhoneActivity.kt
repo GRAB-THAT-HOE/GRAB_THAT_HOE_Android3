@@ -20,20 +20,27 @@ class CheckPhoneActivity : AppCompatActivity() {
         performDataBinding()
 
         with(checkPhoneViewModel) {
+            message.observe(this@CheckPhoneActivity, {
+                Toast.makeText(this@CheckPhoneActivity, "${message.value}", Toast.LENGTH_SHORT).show()
+            })
+            
             onResponseEvent.observe(this@CheckPhoneActivity, {
                 binding.editCheckNum.visibility = View.VISIBLE
                 binding.btnCheck.visibility = View.VISIBLE
                 binding.btnResendCheckNum.visibility = View.VISIBLE
+                binding.btnCheckNum.setBackgroundResource(R.drawable.btn_false_design)
+                binding.btnCheckNum.isEnabled = false
             })
 
             onCheckEvent.observe(this@CheckPhoneActivity, {
+                CreateProfileActivity.pNum = phoneNum.value!!.toInt()
                 val intent = Intent(this@CheckPhoneActivity, SelectJobActivity::class.java)
                 startActivity(intent)
                 finish()
             })
 
             onResendEvent.observe(this@CheckPhoneActivity, {
-                Toast.makeText(applicationContext, "재전송", Toast.LENGTH_SHORT).show()
+                Toast.makeText(applicationContext, "재전송이 되었습니다.", Toast.LENGTH_SHORT).show()
             })
         }
     }
