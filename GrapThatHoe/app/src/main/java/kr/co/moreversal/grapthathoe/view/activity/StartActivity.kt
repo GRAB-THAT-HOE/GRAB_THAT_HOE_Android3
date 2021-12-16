@@ -52,6 +52,7 @@ class StartActivity : AppCompatActivity() {
 
             token.observe(this@StartActivity, {
                 sharedPref.edit().putString("token", token.value)
+                sharedPref.edit().apply()
             })
         }
 

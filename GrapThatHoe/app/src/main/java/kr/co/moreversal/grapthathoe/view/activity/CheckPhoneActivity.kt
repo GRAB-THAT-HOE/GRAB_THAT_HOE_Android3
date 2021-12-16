@@ -1,5 +1,6 @@
 package kr.co.moreversal.grapthathoe.view.activity
 
+import android.app.Activity
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -18,6 +19,7 @@ class CheckPhoneActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         performDataBinding()
+        val sharedPref = getSharedPreferences(CreateProfileActivity.TOKEN_PREFERENCE, Activity.MODE_PRIVATE)
 
         with(checkPhoneViewModel) {
             message.observe(this@CheckPhoneActivity, {
@@ -39,8 +41,19 @@ class CheckPhoneActivity : AppCompatActivity() {
                 finish()
             })
 
+            onHadEvent.observe(this@CheckPhoneActivity, {
+                val intent = Intent(this@CheckPhoneActivity, MainActivity::class.java)
+                startActivity(intent)
+                finish()
+            })
+
             onResendEvent.observe(this@CheckPhoneActivity, {
                 Toast.makeText(applicationContext, "재전송이 되었습니다.", Toast.LENGTH_SHORT).show()
+            })
+
+            token.observe(this@CheckPhoneActivity, {
+                sharedPref.edit().putString("token", token.value)
+                sharedPref.edit().apply()
             })
         }
     }
