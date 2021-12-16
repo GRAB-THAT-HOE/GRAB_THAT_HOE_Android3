@@ -32,11 +32,11 @@
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
             android:layout_marginRight="30dp"
+            android:layout_marginBottom="68dp"
             android:background="@drawable/edittext_normal"
             android:hint="전화번호를 입력해주세요!"
             android:text="@={vm.phoneNum}"
             android:textSize="25sp"
-            android:layout_marginBottom="70dp"
             app:layout_constraintBottom_toTopOf="@+id/btn_check_num"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent" />

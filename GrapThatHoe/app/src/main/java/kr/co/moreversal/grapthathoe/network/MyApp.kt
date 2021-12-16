@@ -1,4 +1,4 @@
-package kr.co.moreversal.grapthathoe.network.model
+package kr.co.moreversal.grapthathoe.network
 
 import android.app.Application
 
