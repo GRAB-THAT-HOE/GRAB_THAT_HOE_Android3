@@ -33,8 +33,8 @@ class CheckPhoneActivity : AppCompatActivity() {
             })
 
             onCheckEvent.observe(this@CheckPhoneActivity, {
+                CreateProfileActivity.pNum = phoneNum.value!!.toInt()
                 val intent = Intent(this@CheckPhoneActivity, SelectJobActivity::class.java)
-
                 startActivity(intent)
                 finish()
             })

@@ -9,3 +9,12 @@ data class ConfirmResponse(
     val status : Int,
     val message : String
 )
+
+data class JoinResponse(
+    val status : Int,
+    val message : String
+)
+
+data class LoginResponse(
+    val token : String
+)

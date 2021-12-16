@@ -6,23 +6,33 @@ import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.MediaStore
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import com.bumptech.glide.Glide
 import kr.co.moreversal.grapthathoe.R
 import kr.co.moreversal.grapthathoe.databinding.ActivityCreateProfileBinding
 import kr.co.moreversal.grapthathoe.viewmodel.activity.CreateProfileViewModel
-import kr.co.moreversal.grapthathoe.viewmodel.activity.MainViewModel
 
 class CreateProfileActivity : AppCompatActivity() {
     lateinit var binding: ActivityCreateProfileBinding
     lateinit var createProfileViewModel: CreateProfileViewModel
 
+    companion object {
+        var pNum : Int = 0
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         performDataBinding()
 
+        val per = intent.getIntExtra("permission", 0)
+
+
         with(createProfileViewModel) {
+            permission.value = per
+            phone.value = pNum
+
             onBackEvent.observe(this@CreateProfileActivity, {
                 finish()
             })
@@ -37,6 +47,10 @@ class CreateProfileActivity : AppCompatActivity() {
                 val intent = Intent(Intent.ACTION_PICK, MediaStore.Images.Media.EXTERNAL_CONTENT_URI)
                 intent.type = "image/*"
                 startActivityForResult(intent, 10)
+            })
+            
+            message.observe(this@CreateProfileActivity, {
+                Toast.makeText(this@CreateProfileActivity, "${message.value}", Toast.LENGTH_SHORT).show()
             })
         }
     }
