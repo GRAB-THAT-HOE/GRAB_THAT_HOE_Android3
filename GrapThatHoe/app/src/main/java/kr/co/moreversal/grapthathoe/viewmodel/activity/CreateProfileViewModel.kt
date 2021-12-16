@@ -23,7 +23,7 @@ class CreateProfileViewModel : ViewModel(){
     val introduce = MutableLiveData<String>()
     val permission = MutableLiveData<Int>()
     val phone = MutableLiveData<Int>()
-
+    val token = MutableLiveData<String>()
     val message = MutableLiveData<String>()
 
     val sublocation: String = "구지"
@@ -72,6 +72,7 @@ class CreateProfileViewModel : ViewModel(){
                     response: Response<LoginResponse>
                 ) {
                     if (response.isSuccessful) {
+                        token.value = response.body()?.token
                         onCheckEvent.call()
                     } else {
                         val errorBody = RetrofitClient.instance.responseBodyConverter<ErrorResponse>(

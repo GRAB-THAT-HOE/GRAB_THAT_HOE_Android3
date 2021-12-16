@@ -1,6 +1,7 @@
 package kr.co.moreversal.grapthathoe.view.activity
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
 import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
@@ -20,6 +21,7 @@ class CreateProfileActivity : AppCompatActivity() {
 
     companion object {
         var pNum : Int = 0
+        const val TOKEN_PREFERENCE = "TOKEN_PREFERENCES"
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -35,6 +37,16 @@ class CreateProfileActivity : AppCompatActivity() {
 
             onBackEvent.observe(this@CreateProfileActivity, {
                 finish()
+            })
+
+            token.observe(this@CreateProfileActivity, {
+                val sharedPref = applicationContext.getSharedPreferences(TOKEN_PREFERENCE, Context.MODE_PRIVATE)
+
+                with(sharedPref.edit()) {
+                    putInt("userPhone", pNum)
+                    putString("token", it)
+                    apply()
+                }
             })
 
             onCheckEvent.observe(this@CreateProfileActivity, {
