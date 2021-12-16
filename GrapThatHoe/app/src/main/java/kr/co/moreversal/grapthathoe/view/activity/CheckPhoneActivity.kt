@@ -24,6 +24,8 @@ class CheckPhoneActivity : AppCompatActivity() {
                 binding.editCheckNum.visibility = View.VISIBLE
                 binding.btnCheck.visibility = View.VISIBLE
                 binding.btnResendCheckNum.visibility = View.VISIBLE
+                binding.btnCheckNum.setBackgroundResource(R.drawable.btn_false_design)
+                binding.btnCheckNum.isEnabled = false
             })
 
             onCheckEvent.observe(this@CheckPhoneActivity, {
