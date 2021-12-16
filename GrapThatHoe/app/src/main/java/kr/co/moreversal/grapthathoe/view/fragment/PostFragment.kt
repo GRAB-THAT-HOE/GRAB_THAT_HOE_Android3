@@ -40,6 +40,7 @@ class PostFragment : Fragment() {
             })
 
             onNextEvent.observe(this@PostFragment, {
+                Post10Fragment.Title = title.value.toString()
                 findNavController().navigate(R.id.action_postFragment_to_post2Fragment)
             })
         }

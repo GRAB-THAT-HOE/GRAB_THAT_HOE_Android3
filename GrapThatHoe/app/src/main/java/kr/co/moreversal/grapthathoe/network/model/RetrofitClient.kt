@@ -1,6 +1,7 @@
 package kr.co.moreversal.grapthathoe.network.model
 
 import com.google.gson.GsonBuilder
+import kr.co.moreversal.grapthathoe.network.api.Post
 import kr.co.moreversal.grapthathoe.network.api.Sign
 import okhttp3.OkHttpClient
 import okhttp3.logging.HttpLoggingInterceptor
@@ -13,6 +14,7 @@ object RetrofitClient {
     private const val BASE_URL = "http://10.21.13.114:4000/api/v1/"
 
     val signInterface : Sign
+    val postInterface : Post
 
     private val gson = GsonBuilder().setLenient().create()
     private val intercepter = HttpLoggingInterceptor().setLevel(HttpLoggingInterceptor.Level.BODY)
@@ -32,5 +34,6 @@ object RetrofitClient {
 
     init {
         signInterface = instance.create(Sign::class.java)
+        postInterface = instance.create(Post::class.java)
     }
 }

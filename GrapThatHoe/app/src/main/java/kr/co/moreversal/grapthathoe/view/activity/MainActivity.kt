@@ -1,8 +1,11 @@
 package kr.co.moreversal.grapthathoe.view.activity
 
+import android.app.Activity
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.util.Log
 import android.view.View
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.findNavController
@@ -20,6 +23,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         performDataBinding()
         setBottomNav()
+        
+        val sharedPref = getSharedPreferences(CreateProfileActivity.TOKEN_PREFERENCE, Activity.MODE_PRIVATE)
+        Log.d("Test", "${sharedPref.getString("token", "")}")
 
         with(mainViewModel) {
             onSettingEvent.observe(this@MainActivity, {

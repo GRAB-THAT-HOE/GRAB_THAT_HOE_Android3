@@ -42,6 +42,7 @@
             android:layout_width="match_parent"
             android:layout_height="50dp"
             android:hint="최대 20글자"
+            android:text="@={vm.title}"
             android:maxLength="20"
             android:textColor="@color/black"
             android:layout_marginLeft="20dp"

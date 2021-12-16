@@ -23,6 +23,7 @@ class Post9Fragment : Fragment() {
     lateinit var post9ViewModel: Post9ViewModel
 
     var timeString: String = ""
+    var BTime : Int = 0
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -47,6 +48,7 @@ class Post9Fragment : Fragment() {
             })
 
             onNextEvent.observe(this@Post9Fragment, {
+                Post10Fragment.EndTime = BTime
                 findNavController().navigate(R.id.action_post9Fragment_to_post10Fragment)
             })
 
@@ -54,6 +56,7 @@ class Post9Fragment : Fragment() {
                 val time = Calendar.getInstance()
                 val timeSetListener = TimePickerDialog.OnTimeSetListener { view, hourOfDay, minute ->
                     timeString = "${hourOfDay}시간 ${minute}분"
+                    BTime = hourOfDay
                     binding.tvRefreshTime.text = timeString
                 }
                 TimePickerDialog(context, timeSetListener, time.get(Calendar.HOUR_OF_DAY), time.get(Calendar.MINUTE),true).show()

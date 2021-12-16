@@ -11,7 +11,6 @@ class TokenInterceptor: Interceptor {
     override fun intercept(chain: Interceptor.Chain): Response {
 
         val context: Context = MyApp.instance
-        // TODO : 토큰 받기
         val sharedPref = context.getSharedPreferences(CreateProfileActivity.TOKEN_PREFERENCE, Context.MODE_PRIVATE)
         val token = sharedPref.getString("token", "") ?: ""
         Log.e("TESTTEST", "token $token")

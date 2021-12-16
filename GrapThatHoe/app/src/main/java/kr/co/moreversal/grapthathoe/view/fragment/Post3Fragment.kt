@@ -43,6 +43,7 @@ class Post3Fragment : Fragment() {
             })
 
             onNextEvent.observe(this@Post3Fragment, {
+                Post10Fragment.AdditionalExplantion = detail.value.toString()
                 findNavController().navigate(R.id.action_post3Fragment_to_post4Fragment)
             })
         }

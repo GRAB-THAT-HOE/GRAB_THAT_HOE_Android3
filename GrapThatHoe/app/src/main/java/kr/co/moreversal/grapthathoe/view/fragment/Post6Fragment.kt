@@ -45,6 +45,10 @@ class Post6Fragment : Fragment() {
             })
 
             onNextEvent.observe(this@Post6Fragment, {
+                Post10Fragment.GiveSnack = binding.checkFood.isChecked
+                Post10Fragment.GiveRoomAndBoard = binding.checkSleep.isChecked
+                Post10Fragment.IsDisable = binding.checkHurt.isChecked
+                Post10Fragment.IsForeign = binding.checkFor.isChecked
                 findNavController().navigate(R.id.action_post6Fragment_to_post7Fragment)
             })
         }

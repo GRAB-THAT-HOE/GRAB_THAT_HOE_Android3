@@ -9,6 +9,7 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.Toast
 import androidx.databinding.DataBindingUtil
 import androidx.lifecycle.ViewModelProvider
 import androidx.navigation.fragment.findNavController
@@ -24,6 +25,28 @@ class Post10Fragment : Fragment() {
     lateinit var post10ViewModel: Post10ViewModel
 
     var timeString: String = ""
+
+    companion object {
+        var Title : String = ""
+        var Mainlocation : String = ""
+        var Explanation : String = ""
+        var Salary : Int = 0
+        var AdditionalExplantion : String = ""
+        var IsDisable : Boolean = false
+        var IsForeign : Boolean = false
+        var GiveRoomAndBoard : Boolean = false
+        var GiveSnack : Boolean = false
+        var StartDateYear : Int = 0
+        var StartDateMonth : Int = 0
+        var StartDateDay : Int = 0
+        var EndDateYear : Int = 0
+        var EndDateMonth : Int = 0
+        var EndDateDay : Int = 0
+        var StartTime : Int = 0
+        var EndTime : Int = 0
+        var BreakTime : Int = 0
+        var Img : String = ""
+    }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -47,8 +70,34 @@ class Post10Fragment : Fragment() {
                 findNavController().navigate(R.id.action_post10Fragment_to_post9Fragment)
             })
 
-            onPostEvent.observe(this@Post10Fragment, {
+            onSuccessEvent.observe(this@Post10Fragment, {
                 findNavController().navigate(R.id.action_post10Fragment_to_farmerHomeFragment)
+            })
+
+            onPostEvent.observe(this@Post10Fragment, {
+                title.value = Title
+                mainLocation.value = Mainlocation
+                explanation.value = Explanation
+                salary.value = Salary
+                additionalExplantion.value = AdditionalExplantion
+                isDisable.value = IsDisable
+                isForeign.value = IsForeign
+                giveRoomAndBoard.value = GiveRoomAndBoard
+                giveSnack.value = GiveSnack
+                startDateYear.value = StartDateYear
+                startDateMonth.value = StartDateMonth
+                startDateDay.value = StartDateDay
+                endDateYear.value = EndDateYear
+                endDateMonth.value = EndDateMonth
+                endDateDay.value = EndDateDay
+                startTime.value = StartTime
+                endTime.value = EndTime
+                breakTime.value = BreakTime
+                img.value = Img
+            })
+
+            message.observe(this@Post10Fragment.viewLifecycleOwner, {
+                Toast.makeText(context, "${message.value}", Toast.LENGTH_SHORT).show()
             })
 
             onPhotoEvent.observe(this@Post10Fragment, {
@@ -74,6 +123,7 @@ class Post10Fragment : Fragment() {
         if (requestCode == 10 && resultCode == Activity.RESULT_OK) {
             data?.data?.let { uri ->
                 val imageUri: Uri? = data.data
+                Img = imageUri.toString()
                 if (imageUri != null) {
                     Glide.with(binding.root)
                         .load(imageUri)
