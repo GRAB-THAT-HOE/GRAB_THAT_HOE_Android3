@@ -46,8 +46,8 @@ class Post9Fragment : Fragment() {
                 findNavController().navigate(R.id.action_post9Fragment_to_post8Fragment)
             })
 
-            onPostEvent.observe(this@Post9Fragment, {
-                findNavController().navigate(R.id.action_post9Fragment_to_farmerHomeFragment)
+            onNextEvent.observe(this@Post9Fragment, {
+                findNavController().navigate(R.id.action_post9Fragment_to_post10Fragment)
             })
 
             onRefreshTimeEvent.observe(this@Post9Fragment, {

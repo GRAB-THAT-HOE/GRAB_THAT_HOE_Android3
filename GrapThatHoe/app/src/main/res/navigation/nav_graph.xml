@@ -230,8 +230,8 @@
             app:destination="@id/post8Fragment"
             app:exitAnim="@android:anim/slide_out_right" />
         <action
-            android:id="@+id/action_post9Fragment_to_farmerHomeFragment"
-            app:destination="@id/farmerHomeFragment"
+            android:id="@+id/action_post9Fragment_to_post10Fragment"
+            app:destination="@id/post10Fragment"
             app:enterAnim="@android:anim/fade_in" />
     </fragment>
     <fragment
@@ -242,6 +242,22 @@
             android:id="@+id/action_settingFragment_to_farmerProfileFragment"
             app:destination="@id/farmerProfileFragment"
             app:exitAnim="@android:anim/slide_out_right" />
+    </fragment>
+    <fragment
+        android:id="@+id/post10Fragment"
+        android:name="kr.co.moreversal.grapthathoe.view.fragment.Post10Fragment"
+        android:label="Post10Fragment" >
+        <action
+            android:id="@+id/action_post10Fragment_to_post9Fragment"
+            app:destination="@id/post9Fragment"
+            app:exitAnim="@android:anim/slide_out_right"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_post10Fragment_to_farmerHomeFragment"
+            app:destination="@id/farmerHomeFragment"
+            app:popUpTo="@id/nav_graph"
+            app:popUpToInclusive="true" />
     </fragment>
 
 </navigation>
